@@ -1,10 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
-      <Layout>Something here</Layout>
-    </div>
+    <Layout>
+      <Head>
+        <title>Peiwen Li</title>
+      </Head>
+    </Layout>
   )
 }

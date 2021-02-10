@@ -5,7 +5,13 @@ import Link from 'next/link'
 
 const capitalize = (text) => `${text.charAt(0).toUpperCase()}${text.slice(1)}`
 
-export default function Nav({ links }) {
+const links = [
+  { name: 'about', path: '/about' },
+  { name: 'portfolio', path: '/portfolio' },
+  { name: 'blog', path: '/blog' },
+]
+
+export default function Nav() {
   const { pathname } = useRouter()
   return (
     <SNav top={pathname === '/'}>
@@ -65,9 +71,7 @@ const SAnchor = styled.a`
   letter-spacing: 2px;
 
   text-shadow: ${({ isActive }) =>
-    isActive
-      ? '4px 4px 4px rgb(10, 5, 1)'
-      : '3px 3px 10px rgb(10, 5, 30)'};
+    isActive ? '4px 4px 4px rgb(10, 5, 1)' : '3px 3px 10px rgb(10, 5, 30)'};
   transition: all 0.5s ease;
   will-change: font-size color;
   :hover {
@@ -75,4 +79,5 @@ const SAnchor = styled.a`
       isHome ? 'calc(3vmin + 25px)' : 'calc(2vmin + 25px)'};
     color: var(--link-text-color);
   }
+  cursor: pointer;
 `

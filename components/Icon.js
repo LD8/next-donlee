@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
-// import { useRouteMatch } from 'react-router-dom'
 
 export default function Icon({ name, imageSource, altText, index, href }) {
   const [isHovered, setIsHovered] = useState(false)
-  // const { url } = useRouteMatch()
-  const url = ''
   const dangleProps = useSpring({
     transform: 'rotateZ(0deg)',
     transformOrigin: 'top',
@@ -31,6 +28,7 @@ export default function Icon({ name, imageSource, altText, index, href }) {
           target='_blank'
           rel='noopener noreferrer'
           // href={href === '' ? `${url.match(/.*\//)[0]}cv` : href}
+          href={href}
         >
           <animated.img src={imageSource} alt={altText} style={dangleProps} />
         </a>
@@ -39,7 +37,8 @@ export default function Icon({ name, imageSource, altText, index, href }) {
         <a
           target='_blank'
           rel='noopener noreferrer'
-          href={href === '' ? `${url.match(/.*\//)[0]}cv` : href}
+          // href={href === '' ? `${url.match(/.*\//)[0]}cv` : href}
+          href={href}
         >
           {name}
         </a>

@@ -1,10 +1,13 @@
 import React from 'react'
 import { Layout } from '../components'
+import Head from 'next/head'
 
 export default function AboutPage() {
   return (
     <Layout>
-      <div>About Page</div>
+      <Head>
+        <title>About Peiwen Li</title>
+      </Head>
     </Layout>
   )
 }

@@ -1,27 +1,29 @@
 import React from 'react'
 // import { useLocation } from 'react-router-dom'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import styled from 'styled-components'
 import Nav from './Nav'
 import Quote from './Quote'
+import Footer from '../Footer'
 
 export default function Layout({ children }) {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
 
-  const links = [
-    { name: 'about', path: '/about' },
-    { name: 'portfolio', path: '/portfolio' },
-    { name: 'blog', path: '/blog' },
-  ]
-
   return (
-    <SContainer id="SContainer">
-      <SBGDimmer darken={isLanding} id="SBGDimmer" />
-      <Nav links={links} />
-      {children}
-      <Quote transparent={isLanding} />
-    </SContainer>
+    <>
+      <Head>
+        <title>Don Lee</title>
+      </Head>
+      <SContainer id='SContainer'>
+        <SBGDimmer darken={isLanding} id='SBGDimmer' />
+        <Nav />
+        {children}
+        <Quote transparent={isLanding} />
+      </SContainer>
+      {!isLanding && <Footer />}
+    </>
   )
 }
 
@@ -48,5 +50,9 @@ const SBGDimmer = styled.div`
   width: 100vw;
   transition: all 0.3s ease;
   background-color: ${(props) => (props.darken ? '' : 'rgba(0, 0, 0, 0.4)')};
-  background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.05), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(150, 150, 150, 0.05),
+    rgba(0, 0, 0, 0.5)
+  );
 `

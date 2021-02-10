@@ -13,11 +13,11 @@ const icons = [
     name: 'CV',
     imageSource: '/svg/CV.svg',
     altText: 'CV/Resumé of Peiwen Li, click to view',
-    href: '',
+    href: '/cv',
   },
   {
     name: 'Github',
-    imageSource: '/svg/AtGithub.svg',
+    imageSource: '/svg/Github.svg',
     altText: 'Github account of Peiwen Li',
     href: 'https://github.com/LD8',
   },
