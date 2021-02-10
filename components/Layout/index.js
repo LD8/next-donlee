@@ -4,18 +4,24 @@ import styled from 'styled-components'
 import Main from './Main'
 import Nav from './Nav'
 import Quote from './Quote'
+import Head from 'next/head'
 
 export default function Layout({ children }) {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
 
   return (
-    <SContainer id='SContainer'>
-      <SBGDimmer id='SBGDimmer' darken={isLanding} />
-      <Nav />
-      {!isLanding && <Main>{children}</Main>}
-      <Quote transparent={isLanding} />
-    </SContainer>
+    <>
+      <Head>
+        <title>Peiwen Li</title>
+      </Head>
+      <SContainer id='SContainer'>
+        <SBGDimmer id='SBGDimmer' lighten={isLanding} />
+        <Nav />
+        {!isLanding && <Main>{children}</Main>}
+        <Quote show={isLanding} />
+      </SContainer>
+    </>
   )
 }
 
@@ -41,7 +47,7 @@ const SBGDimmer = styled.div`
   height: 100vh;
   width: 100vw;
   transition: all 0.3s ease;
-  background-color: ${(props) => (props.darken ? '' : 'rgba(0, 0, 0, 0.4)')};
+  background-color: ${({ lighten }) => (lighten ? '' : 'rgba(0, 0, 0, 0.4)')};
   background-image: linear-gradient(
     to bottom,
     rgba(150, 150, 150, 0.05),

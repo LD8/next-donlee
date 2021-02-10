@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const capitalize = (text) => `${text.charAt(0).toUpperCase()}${text.slice(1)}`
+// const capitalize = (text) => `${text.charAt(0).toUpperCase()}${text.slice(1)}`
 
 const links = [
-  { name: 'about', path: '/about' },
-  { name: 'portfolio', path: '/portfolio' },
-  { name: 'blog', path: '/blog' },
+  { name: 'About', path: '/about' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Blog', path: '/blog' },
 ]
 
 export default function Nav() {
@@ -17,13 +17,13 @@ export default function Nav() {
     <SNav top={pathname === '/'}>
       <ul>
         {links.map(({ name, path }) => (
-          <li key={name}>
+          <li key={path}>
             <Link href={pathname !== path ? path : '/'}>
               <SAnchor
                 isActive={pathname === path || pathname === '/'}
                 isHome={pathname === '/'}
               >
-                {capitalize(name)}
+                {name}
               </SAnchor>
             </Link>
           </li>
