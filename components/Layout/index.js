@@ -6,7 +6,7 @@ import Nav from './Nav'
 import Quote from './Quote'
 import Head from 'next/head'
 
-export default function Layout({ children }) {
+export const Layout = ({ children }) => {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
 

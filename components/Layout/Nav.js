@@ -1,22 +1,17 @@
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { NAV_LINKS } from '../consts'
 
 // const capitalize = (text) => `${text.charAt(0).toUpperCase()}${text.slice(1)}`
-
-const links = [
-  { name: 'About', path: '/about' },
-  { name: 'Portfolio', path: '/portfolio' },
-  { name: 'Blog', path: '/blog' },
-]
 
 export default function Nav() {
   const { pathname } = useRouter()
   return (
     <SNav top={pathname === '/'}>
       <ul>
-        {links.map(({ name, path }) => (
+        {NAV_LINKS.map(({ name, path }) => (
           <li key={path}>
             <Link href={pathname !== path ? path : '/'}>
               <SAnchor

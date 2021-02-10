@@ -1,8 +1,8 @@
-import React from 'react'
 import { useRouter } from 'next/router'
+import React from 'react'
+import { animated, useTransition } from 'react-spring'
 import styled from 'styled-components'
-import { useTransition, animated } from 'react-spring'
-import Footer from '../Footer'
+import Footer from './Footer'
 
 export default function Main({ children }) {
   const location = useRouter()

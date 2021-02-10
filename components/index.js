@@ -1,4 +1,3 @@
-import Layout from './Layout'
-import Footer from './Footer'
-
-export { Layout, Footer }
+export { AboutPage } from './AboutPage'
+export { Layout } from './Layout'
+export { PageNotFound } from './PageNoteFound'
