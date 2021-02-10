@@ -1,29 +1,21 @@
-import React from 'react'
-// import { useLocation } from 'react-router-dom'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+import React from 'react'
 import styled from 'styled-components'
+import Main from './Main'
 import Nav from './Nav'
 import Quote from './Quote'
-import Footer from '../Footer'
 
 export default function Layout({ children }) {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
 
   return (
-    <>
-      <Head>
-        <title>Don Lee</title>
-      </Head>
-      <SContainer id='SContainer'>
-        <SBGDimmer darken={isLanding} id='SBGDimmer' />
-        <Nav />
-        {children}
-        <Quote transparent={isLanding} />
-      </SContainer>
-      {!isLanding && <Footer />}
-    </>
+    <SContainer id='SContainer'>
+      <SBGDimmer id='SBGDimmer' darken={isLanding} />
+      <Nav />
+      {!isLanding && <Main>{children}</Main>}
+      <Quote transparent={isLanding} />
+    </SContainer>
   )
 }
 
