@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Footer } from "../components";
+import React from 'react'
+import styled from 'styled-components'
+import { Footer } from '../components'
 
-export const NotFound = () => {
+export default function NotFound() {
   return (
-    <S404 id="S404">
+    <S404 id='S404'>
       <h3>Oops! 404 page not found</h3>
       <p>Please click any other link on the page</p>
-      <Footer />
+      {/* <Footer /> */}
     </S404>
-  );
-};
+  )
+}
 
 const S404 = styled.div`
   width: 100%;
@@ -41,4 +41,4 @@ const S404 = styled.div`
   p {
     margin: 4vh 2vw;
   }
-`;
+`

@@ -1,5 +1,10 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 export default function Home() {
-  return <div>Welcome to DonLee.online</div>
+  return (
+    <div>
+      <Layout>Something here</Layout>
+    </div>
+  )
 }

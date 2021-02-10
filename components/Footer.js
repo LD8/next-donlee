@@ -1,32 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
-import At from '../assets/svg/At.svg'
-import CV from '../assets/svg/CV.svg'
-import Github from '../assets/svg/Github.svg'
-import { Icon } from './Icon'
+import Icon  from './Icon'
 
 const icons = [
   {
     name: 'Email',
-    imageSource: At,
+    imageSource: '/svg/At.svg',
     altText: 'Email address: Mail to Peiwen Li at don_lee@me.com',
     href: 'mailto: don_lee@me.com',
   },
   {
     name: 'CV',
-    imageSource: CV,
+    imageSource: '/svg/CV.svg',
     altText: 'CV/Resumé of Peiwen Li, click to view',
     href: '',
   },
   {
     name: 'Github',
-    imageSource: Github,
+    imageSource: '/svg/AtGithub.svg',
     altText: 'Github account of Peiwen Li',
     href: 'https://github.com/LD8',
   },
 ]
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <SFooter id='SFooter'>
       {icons.map((i, index) => (
