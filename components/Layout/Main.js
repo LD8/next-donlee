@@ -1,18 +1,11 @@
-import { useRouter } from 'next/router'
 import React from 'react'
 import { animated, useTransition } from 'react-spring'
 import styled from 'styled-components'
 import Footer from './Footer'
 
 export default function Main({ children }) {
-  const location = useRouter()
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(-100%,0,0)' },
-  })
-  return transitions.map(({ item: location, props, key }) => (
-    <SMain id='main' key={key} style={props}>
+  return (
+    <SMain id='main'>
       <SPageContainer id='SPageContainer'>
         <div className='scroll-page'>
           {children}
@@ -20,7 +13,7 @@ export default function Main({ children }) {
         </div>
       </SPageContainer>
     </SMain>
-  ))
+  )
 }
 
 const SMain = styled(animated.main)`

@@ -1,3 +1,5 @@
-import { Layout } from '../components'
+export default function Home() {
+  return <></>
+}
 
-export default Layout
+// export const getStaticProps = async () => ({ props: {} })

@@ -1,3 +1,3 @@
-import { PageNoteFound } from '../components'
+import { PageNotFound } from '../components'
 
-export default PageNoteFound
+export default PageNotFound

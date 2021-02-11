@@ -2,13 +2,12 @@ import Head from 'next/head'
 import React from 'react'
 import styled from 'styled-components'
 import { SKILLS } from '../consts'
-import { Layout } from '..'
 import AnimateImage from './AnimateImage'
 import Skill from './Skill'
 
 export const AboutPage = () => {
   return (
-    <Layout>
+    <>
       <Head>
         <title>About Peiwen Li</title>
       </Head>
@@ -38,8 +37,23 @@ export const AboutPage = () => {
           </ul>
         </section>
       </SMyInfo>
-    </Layout>
+    </>
   )
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch(`https://.../data`)
+  const data = await res.json()
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {}, // will be passed to the page component as props
+  }
 }
 
 const SMyInfo = styled.div`

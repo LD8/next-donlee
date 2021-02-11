@@ -1,19 +1,16 @@
 import Head from 'next/head'
 import React from 'react'
 import styled from 'styled-components'
-import { Layout } from '..'
 
 export const PageNotFound = () => {
   return (
-    <Layout>
-      <S404 id='S404'>
-        <Head>
-          <title>Page Not Found</title>
-        </Head>
-        <h3>Oops! 404 page not found</h3>
-        <p>Please click any other link on the page</p>
-      </S404>
-    </Layout>
+    <S404 id='S404'>
+      <Head>
+        <title>Page Not Found</title>
+      </Head>
+      <h3>Oops! 404 page not found</h3>
+      <p>Please click any other link on the page</p>
+    </S404>
   )
 }
 
