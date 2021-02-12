@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
+import { useState } from 'react'
+import { animated, useSpring } from 'react-spring'
+import styled from 'styled-components'
 
 export default function Icon({ name, imageSource, altText, index, href }) {
   const [isHovered, setIsHovered] = useState(false)
@@ -18,7 +19,7 @@ export default function Icon({ name, imageSource, altText, index, href }) {
   })
 
   return (
-    <div className='icon'>
+    <SIcon id={`SIcon_${name}`}>
       <animated.div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -43,6 +44,35 @@ export default function Icon({ name, imageSource, altText, index, href }) {
           {name}
         </a>
       </p>
-    </div>
+    </SIcon>
   )
 }
+
+const SIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a {
+    margin: 0 calc(1vw + 20px);
+    padding: 0;
+
+    img {
+      height: 40px;
+      @media only screen and (max-width: 800px) {
+        height: 35px;
+      }
+    }
+  }
+  p {
+    margin-top: 10px;
+    font-size: small;
+    a {
+      color: rgb(220, 220, 220);
+      text-decoration: none;
+      :hover {
+        text-decoration: underline;
+      }
+    }
+  }
+`

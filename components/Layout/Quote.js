@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-export default function Quote({ show }) {
+export default function Quote({ show = false }) {
   return (
     <SQuote show={show}>
       <p>

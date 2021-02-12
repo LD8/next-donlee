@@ -1,62 +1,59 @@
-import React from 'react'
-import { animated, useTransition } from 'react-spring'
 import styled from 'styled-components'
-import Footer from './Footer'
+import { FOOTER_ICONS } from '../consts'
+import Icon from './Icon'
 
 export default function Main({ children }) {
+  const footerContent = FOOTER_ICONS.map((i, index) => (
+    <Icon
+      key={index}
+      name={i.name}
+      imageSource={i.imageSource}
+      altText={i.altText}
+      index={index}
+      href={i.href}
+    />
+  ))
+
   return (
-    <SMain id='main'>
-      <SPageContainer id='SPageContainer'>
-        <div className='scroll-page'>
-          {children}
-          <Footer />
-        </div>
-      </SPageContainer>
-    </SMain>
+    <SMainWrapper id='SMainWrapper'>
+      <main>{children}</main>
+      <footer>{footerContent}</footer>
+    </SMainWrapper>
   )
 }
 
-const SMain = styled(animated.main)`
-  position: relative;
-  height: 100%;
+const SMainWrapper = styled.div`
   width: 100%;
+  min-height: 950px;
   z-index: 5;
-`
-
-const SPageContainer = styled.div`
-  position: absolute;
-  height: 93vh;
-  width: 100vw;
-  top: 7vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 5px 5px 0 0;
   box-shadow: 0 0 20px var(--bg-shadow-color);
-  will-change: transform opacity;
-  .scroll-page {
-    width: 100%;
-    height: 100%;
+  color: silver;
+  background-image: linear-gradient(
+    180deg,
+    rgba(40, 43, 41, 0.8),
+    rgba(40, 43, 41, 0.9)
+  );
+
+  > main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* DO NOT USE 'justify-content: center', or it won't scroll */
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch; /* keep scrolling after finger leaves the screen */
-    /* dark background, light font */
-    color: silver;
-    /* background-color: rgb(40, 43, 41); */
+    align-items: center;
+  }
+
+  > footer {
+    position: sticky;
+    top: 100%;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(
-      180deg,
-      rgba(40, 43, 41, 0.8),
-      rgba(40, 43, 41, 0.9)
+      90deg,
+      rgb(40, 46, 41),
+      rgba(140, 143, 141, 0.8),
+      rgb(40, 46, 41)
     );
-    ::-webkit-scrollbar {
-      width: 4px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(80, 100, 80, 0.3);
-      border-radius: 3px;
-    }
   }
 `

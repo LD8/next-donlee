@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import React from 'react'
 import styled from 'styled-components'
 import Main from './Main'
 import Nav from './Nav'
@@ -11,41 +10,39 @@ export const Layout = ({ children }) => {
   const isLanding = pathname === '/'
 
   return (
-    <>
+    <SContainer id='SContainer' isLanding={isLanding}>
       <Head>
         <title>Peiwen Li</title>
       </Head>
-      <SContainer id='SContainer'>
-        <SBGDimmer id='SBGDimmer' lighten={isLanding} />
-        <Nav />
-        {!isLanding && <Main>{children}</Main>}
-        <Quote show={isLanding} />
-      </SContainer>
-    </>
+      <SBGDimmer id='SBGDimmer' lighten={isLanding} />
+      <Nav />
+      {!isLanding && <Main>{children}</Main>}
+      <Quote show={isLanding} />
+    </SContainer>
   )
 }
 
 const SContainer = styled.div`
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  padding-top: ${({ isLanding }) => (isLanding ? '' : '7vh')};
+  min-width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  /* overflow: auto; */
 
   background-color: var(--bg-color);
   background-image: url('/bg.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 `
 
 const SBGDimmer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   transition: all 0.3s ease;
   background-color: ${({ lighten }) => (lighten ? '' : 'rgba(0, 0, 0, 0.4)')};
   background-image: linear-gradient(

@@ -34,14 +34,12 @@ const SNav = styled.nav`
   max-width: 1000px;
   height: 7vh;
   top: ${(props) => (props.top ? '40vh' : '0')};
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 10;
   transition: all 0.5s ease;
   ul {
     width: 80%;
-    height: 7vh;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
