@@ -24,10 +24,11 @@ export default function Main({ children }) {
 
 const SMainWrapper = styled.div`
   width: 100%;
-  min-height: 950px;
+  min-height: 93vh;
+  height: 1000px;
   z-index: 5;
-  border-radius: 5px 5px 0 0;
-  box-shadow: 0 0 20px var(--bg-shadow-color);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 0 20px var(--bg-shadow-color);
   color: silver;
   background-image: linear-gradient(
     180deg,

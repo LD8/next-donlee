@@ -25,22 +25,12 @@ export default function Icon({ name, imageSource, altText, index, href }) {
         onMouseLeave={() => setIsHovered(false)}
         style={hoveredProps}
       >
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          // href={href === '' ? `${url.match(/.*\//)[0]}cv` : href}
-          href={href}
-        >
+        <a target='_blank' rel='noopener noreferrer' href={href}>
           <animated.img src={imageSource} alt={altText} style={dangleProps} />
         </a>
       </animated.div>
       <p>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          // href={href === '' ? `${url.match(/.*\//)[0]}cv` : href}
-          href={href}
-        >
+        <a target='_blank' rel='noopener noreferrer' href={href}>
           {name}
         </a>
       </p>
