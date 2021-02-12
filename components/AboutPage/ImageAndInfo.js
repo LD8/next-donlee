@@ -25,6 +25,7 @@ const SImageAndInfoSection = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
   .my-portrait {
     display: flex;
     justify-content: center;
@@ -46,6 +47,7 @@ const SImageAndInfoSection = styled.section`
       filter: contrast(1.9);
     }
   }
+
   .my-info {
     width: 60%;
     text-align: left;
