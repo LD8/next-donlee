@@ -1,3 +1,7 @@
 export { AboutPage } from './AboutPage'
 export { Layout } from './Layout'
 export { PageNotFound } from './PageNotFound'
+export { BlogDetail } from './BlogPage'
+export { BlogList } from './BlogPage'
+export { ShowcaseList } from './PortfolioPage'
+export { ShowcaseDetail } from './PortfolioPage'
