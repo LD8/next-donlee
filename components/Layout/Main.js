@@ -3,16 +3,7 @@ import { FOOTER_ICONS } from '../consts'
 import Icon from './Icon'
 
 export default function Main({ children }) {
-  const footerContent = FOOTER_ICONS.map((i, index) => (
-    <Icon
-      key={index}
-      name={i.name}
-      imageSource={i.imageSource}
-      altText={i.altText}
-      index={index}
-      href={i.href}
-    />
-  ))
+  const footerContent = FOOTER_ICONS.map((i) => <Icon key={i.name} {...i} />)
 
   return (
     <SMainWrapper id='SMainWrapper'>
@@ -25,7 +16,7 @@ export default function Main({ children }) {
 const SMainWrapper = styled.div`
   width: 100%;
   min-height: 93vh;
-  height: 1000px;
+  /* height: 1000px; */
   z-index: 5;
   border-radius: 20px 20px 0 0;
   box-shadow: 0px 0 20px var(--bg-shadow-color);

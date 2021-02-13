@@ -8,20 +8,20 @@ export default function MyApp({ Component, pageProps, router }) {
   const transitions = useTransition([Component], (c) => c, {
     from: {
       opacity: 0,
-      position: 'absolute',
+      position: 'relative',
       transform: 'translate3d(100%,0,0)',
     },
     enter: {
       opacity: 1,
-      position: 'absolute',
+      position: 'relative',
       transform: 'translate3d(0%,0,0)',
     },
     leave: {
       opacity: 0,
-      position: 'absolute',
+      position: 'relative',
       transform: 'translate3d(-100%,0,0)',
     },
-    config: { ...config.gentle },
+    config: config.gentle,
     // delay: () => (router.pathname === '/' ? 2000 : 0),
   })
 
