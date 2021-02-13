@@ -1,6 +1,13 @@
+import Head from 'next/head'
+import useRefToSetHeight from '@/lib/useRefToSetHeight'
+
 export const ShowcaseList = () => {
+  const ref = useRefToSetHeight()
   return (
-    <div>
+    <div ref={ref}>
+      <Head>
+        <title>Peiwen Li's Portfolio</title>
+      </Head>
       <Placeholder />
     </div>
   )

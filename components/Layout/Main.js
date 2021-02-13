@@ -1,19 +1,26 @@
+import { createContext, useState } from 'react'
 import styled from 'styled-components'
 import { FOOTER_ICONS } from '../consts'
 import Icon from './Icon'
 
-export default function Main({ children }) {
-  const footerContent = FOOTER_ICONS.map((i) => <Icon key={i.name} {...i} />)
+export const mainDivHeightContext = createContext()
 
+export default function Main({ children, show }) {
+  const footerContent = FOOTER_ICONS.map((i) => <Icon key={i.name} {...i} />)
+  const [height, setHeight] = useState(0)
+  const { Provider } = mainDivHeightContext
   return (
-    <SMainWrapper id='SMainWrapper'>
-      <main>{children}</main>
+    <SMainWrapper id='SMainWrapper' show={show}>
+      <Provider value={setHeight}>
+        <main style={{ height }}>{children}</main>
+      </Provider>
       <footer>{footerContent}</footer>
     </SMainWrapper>
   )
 }
 
 const SMainWrapper = styled.div`
+  opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
   min-height: 93vh;
   /* height: 1000px; */

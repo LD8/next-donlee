@@ -1,15 +1,8 @@
-import Head from 'next/head'
-import { BlogList } from '../../components'
-import { getSortedPostsData } from '../../lib/posts'
+import { BlogList } from '@/components'
+import { getSortedPostsData } from '@/lib/posts'
 
 export default function BlogListPage(props) {
-  return (
-    <BlogList {...props}>
-      <Head>
-        <title>Peiwen Li's Blog</title>
-      </Head>
-    </BlogList>
-  )
+  return <BlogList {...props} />
 }
 
 export async function getStaticProps() {

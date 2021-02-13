@@ -1,3 +1,3 @@
-export default function BlogDetail() {
+export default function BlogDetailPage() {
   return <div>Blog Detail</div>
 }

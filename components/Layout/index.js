@@ -10,20 +10,20 @@ export const Layout = ({ children }) => {
   const isLanding = pathname === '/'
 
   return (
-    <SContainer id='SContainer' isLanding={isLanding}>
+    <SContainer id='SContainer' hasPaddingTop={!isLanding}>
       <Head>
         <title>Peiwen Li</title>
       </Head>
       <SBGDimmer id='SBGDimmer' lighten={isLanding} />
       <Nav />
-      {!isLanding && <Main>{children}</Main>}
+      <Main show={!isLanding}>{children}</Main>
       <Quote show={isLanding} />
     </SContainer>
   )
 }
 
 const SContainer = styled.div`
-  padding-top: ${({ isLanding }) => (isLanding ? '' : '7vh')};
+  padding-top: ${({ hasPaddingTop }) => (hasPaddingTop ? '7vh' : '')};
   min-height: 100vh;
   display: flex;
   flex-direction: column;

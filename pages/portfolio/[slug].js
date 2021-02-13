@@ -1,3 +1,3 @@
-export default function PortfolioDetail() {
+export default function ShowcaseDetailPage() {
   return <div>Portfolio Detail</div>
 }
