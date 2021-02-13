@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "React Django Deployment"
-categories: React Django
+title: React Django Deployment
+tags: React, Django
+summary: This is a post about React Django Deployment on VPS Ubuntu LTS 18.04. I couldn't find any detailed guide or tutorials for newbies so I guess sharing my experience is the best I can do for now.
 ---
 
 This is a post about React Django Deployment on VPS Ubuntu LTS 18.04. I couldn't find any detailed guide or tutorials for newbies so I guess sharing my experience is the best I can do for now.

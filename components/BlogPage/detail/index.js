@@ -1,12 +1,12 @@
 import useRefToSetHeight from '@/lib/useRefToSetHeight'
 import Head from 'next/head'
-// import { Tags } from './Tags'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import styled from 'styled-components'
+import Tags from '../components/Tags'
 
-const renderers = {
+export const renderers = {
   code: ({ language, value }) => {
     return (
       <SyntaxHighlighter
@@ -18,7 +18,7 @@ const renderers = {
   },
 }
 
-export const PostDetail = ({ slug, title, date, content }) => {
+export const PostDetail = ({ slug, title, tags, date, content }) => {
   const ref = useRefToSetHeight()
   return (
     <SPostDetail id='SPostDetail' ref={ref}>
@@ -26,15 +26,14 @@ export const PostDetail = ({ slug, title, date, content }) => {
         <title>Blog - {title}</title>
       </Head>
       <h1 className='title'>{title}</h1>
-      <hr />
-      <p className='date'>{date}</p>
-      {/* <Tags tags={tags} /> */}
+      <Tags tags={tags} />
       <ReactMarkdown
         className='content'
         escapeHtml={false}
         renderers={renderers}
         children={content}
       />
+      <p className='date'>{date}</p>
     </SPostDetail>
   )
 }
@@ -45,11 +44,12 @@ const SPostDetail = styled.div`
   margin: 0 auto;
   padding: 5vh 10px;
   .title {
-    margin-bottom: 1vh;
+    padding-bottom: 15px;
     text-align: center;
     font-size: calc(1vmin + 25px);
     color: white;
     font-weight: 500;
+    border-bottom: 2px solid grey;
   }
   .content {
     overflow: hidden;
@@ -104,8 +104,9 @@ const SPostDetail = styled.div`
     }
   }
   .date {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 15px;
+    text-align: right;
+    letter-spacing: 0.1em;
+    font-size: 15px;
   }
 `

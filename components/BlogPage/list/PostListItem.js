@@ -1,33 +1,27 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-// import { Tags } from './Tags'
-// import slugifyText from '../Utils.js'
+import Tags from '../components/Tags'
 
-export default function PostListItem({
-  slug,
-  date,
-  title,
-  summary,
-}) {
+export default function PostListItem({ slug, date, title, summary, tags }) {
   return (
-    <SPostListItem id={`SPostListItem_${slug}`} className='post-list-item'>
+    <SPostLi id={`SPostListItem_${slug}`} className='post-list-item'>
       <h2>
         <Link href={`/blog/${slug}`}>
           <a>{title}</a>
         </Link>
       </h2>
-      {/* <Tags tags={tags} /> */}
+      <Tags tags={tags} />
       <p className='summary'>
         <Link href={`/blog/${slug}`}>
           <a>{summary}</a>
         </Link>
       </p>
       <p className='date'>{date}</p>
-    </SPostListItem>
+    </SPostLi>
   )
 }
 
-const SPostListItem = styled.li`
+const SPostLi = styled.li`
   width: 90%;
   max-width: 600px;
   margin: 0 auto 5vh auto;
@@ -63,6 +57,6 @@ const SPostListItem = styled.li`
     }
   }
   .date {
-    font-size: 12px;
+    font-size: 15px;
   }
 `
