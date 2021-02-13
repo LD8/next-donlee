@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Head from 'next/head'
 // import { Tags } from './Tags'
 import ReactMarkdown from 'react-markdown'
 import CodeBlock from './CodeBlock'
@@ -8,15 +9,19 @@ export const PostDetail = ({ slug, title, date, content }) => {
   const ref = useRefToSetHeight()
   return (
     <SPostDetail id='SPostDetail' ref={ref}>
+      <Head>
+        <title>Blog - {title}</title>
+      </Head>
       <h1 className='title'>{title}</h1>
       <hr />
+      <p className='date'>{date}</p>
       {/* <Tags tags={tags} /> */}
-      <ReactMarkdown
+      {/* <ReactMarkdown
         source={content}
         renderers={{ code: CodeBlock }}
         className='content'
-      />
-      <p className='date'>{date}</p>
+      /> */}
+      <div dangerouslySetInnerHTML={{ __html: content }} className='content' />
     </SPostDetail>
   )
 }
@@ -24,8 +29,8 @@ export const PostDetail = ({ slug, title, date, content }) => {
 const SPostDetail = styled.div`
   width: 100%;
   max-width: 800px;
-  margin: 5vh auto;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 5vh 10px;
   .title {
     margin-bottom: 1vh;
     text-align: center;
@@ -34,7 +39,8 @@ const SPostDetail = styled.div`
     font-weight: 500;
   }
   .content {
-    margin: 5vh 0;
+    overflow: hidden;
+    margin: 1vh 0;
     line-height: 2em;
     h1,
     h2,
@@ -85,6 +91,8 @@ const SPostDetail = styled.div`
     }
   }
   .date {
+    text-align:center;
+    margin-top: 20px;
     font-size: 12px;
   }
 `
