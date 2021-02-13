@@ -1,9 +1,22 @@
-import styled from 'styled-components'
+import useRefToSetHeight from '@/lib/useRefToSetHeight'
 import Head from 'next/head'
 // import { Tags } from './Tags'
 import ReactMarkdown from 'react-markdown'
-import CodeBlock from './CodeBlock'
-import useRefToSetHeight from '@/lib/useRefToSetHeight'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import styled from 'styled-components'
+
+const renderers = {
+  code: ({ language, value }) => {
+    return (
+      <SyntaxHighlighter
+        style={tomorrow}
+        language={language}
+        children={value}
+      />
+    )
+  },
+}
 
 export const PostDetail = ({ slug, title, date, content }) => {
   const ref = useRefToSetHeight()
@@ -16,12 +29,12 @@ export const PostDetail = ({ slug, title, date, content }) => {
       <hr />
       <p className='date'>{date}</p>
       {/* <Tags tags={tags} /> */}
-      {/* <ReactMarkdown
-        source={content}
-        renderers={{ code: CodeBlock }}
+      <ReactMarkdown
         className='content'
-      /> */}
-      <div dangerouslySetInnerHTML={{ __html: content }} className='content' />
+        escapeHtml={false}
+        renderers={renderers}
+        children={content}
+      />
     </SPostDetail>
   )
 }
@@ -91,7 +104,7 @@ const SPostDetail = styled.div`
     }
   }
   .date {
-    text-align:center;
+    text-align: center;
     margin-top: 20px;
     font-size: 12px;
   }
