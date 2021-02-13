@@ -1,7 +1,6 @@
 // import App from 'next/app'
-import { useContext, useEffect, useRef } from 'react'
 import { animated, config, useTransition } from 'react-spring'
-import { Layout, mainDivHeightContext } from '../components'
+import { Layout } from '../components'
 import '../styles/global.css'
 
 export default function MyApp({ Component, pageProps, router }) {
@@ -26,17 +25,10 @@ export default function MyApp({ Component, pageProps, router }) {
     // delay: () => (router.pathname === '/' ? 2000 : 0),
   })
 
-  const setHeight = useContext(mainDivHeightContext)
-  const ref = useRef()
-  useEffect(() => {
-    console.log(typeof setHeight)
-    // setHeight(ref.current && ref.current.offsetHeight)
-  }, [])
-
   return (
     <Layout>
       {transitions.map(({ item: Component, props, key }) => (
-        <animated.div key={key} style={props} ref={ref}>
+        <animated.div key={key} style={props}>
           <Component {...pageProps} />
         </animated.div>
       ))}

@@ -28,12 +28,11 @@ const SContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* overflow: auto; */
 
   background-color: var(--bg-color);
   background-image: url('/bg.jpg');
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: 100%;
   background-position: top;
 `
 

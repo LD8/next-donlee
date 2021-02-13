@@ -1,2 +1,2 @@
-export { BlogDetail } from './detail'
-export { BlogList } from './list'
+export { PostDetail } from './detail'
+export { PostList } from './list'
