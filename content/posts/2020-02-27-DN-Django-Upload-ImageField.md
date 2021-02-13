@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: RWiR - Search Combo"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## [SO: Django - form not validating](https://stackoverflow.com/questions/60412189/django-form-not-validating)

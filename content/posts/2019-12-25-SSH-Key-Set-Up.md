@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 title: SSH Key Set Up Step by Step
 --- 
 This is my first time to push a repo without using an http link so I need to generate a new SSH key.

@@ -1,5 +1,5 @@
 ---
-Layout: post
+ 
 ---
 I was just searching how to learn React and [Overreacted](https://overreacted.io/) crossed my browser. After reading the first blog [_My Decade in Review_](https://overreacted.io/my-decade-in-review/), I became fond of this [Dan Abramov](https://mobile.twitter.com/dan_abramov) not just because my partner is also Russian or he now lives in London where I also lived, but more because of his passion in programming, starting from penniless working his way up and having never given up.
 

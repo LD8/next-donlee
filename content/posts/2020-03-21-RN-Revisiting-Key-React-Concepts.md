@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "React Notes: Revisisiting Key React JS Concepts"
-categories: React Notes
+tags: React Notes
 ---
 
 I have learnt React briefly a couple of months ago. It's a good idea to reinforce the fundamentals by revisiting some of the key concepts of this library before diving in deeper.  

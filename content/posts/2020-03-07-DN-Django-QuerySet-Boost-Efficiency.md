@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: Django QuerySet Boost Efficiency"
-categories: Daily Notes
+tags: Daily Notes
 ---
 > * In general, the results of a QuerySet aren’t fetched from the database until you “ask” for them. When you do, the QuerySet is evaluated by accessing the database. --[lazy qeury](https://docs.djangoproject.com/en/3.0/topics/db/queries/#querysets-are-lazy)  
 

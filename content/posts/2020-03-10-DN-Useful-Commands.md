@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: Useful Commands"
-categories: Daily Notes
+tags: Daily Notes
 ---
 ### Commands are difficult to remember, and easy to forget, so here's a common command repository
 * UPDATE pip packages

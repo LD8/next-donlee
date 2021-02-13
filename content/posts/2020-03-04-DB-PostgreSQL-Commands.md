@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "DATABASE: PostgreSQL Commands"
-categories: Database
+tags: Database
 ---
 # PostgreSQL Basic Commands
 You can always check the [manual](https://www.postgresql.org/docs/12/index.html) and its useful [Appendixes](https://www.postgresql.org/docs/12/appendixes.html) section.

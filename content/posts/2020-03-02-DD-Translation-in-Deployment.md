@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Django Deployment: Translation Error in Deployment"
-categories: Django Deployment
+tags: Django Deployment
 ---
 
 ## Django.mo? Partial Translation When deployed

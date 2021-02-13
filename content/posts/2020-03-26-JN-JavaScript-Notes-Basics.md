@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "JavaScript Notes: Basics"
-categories: JavaScript Notes
+tags: JavaScript Notes
 ---
 
 I decide to spend 3 hours to review all of the basics of JS, and make comments and record the basics of the stuff I don't quit remember.
@@ -37,7 +37,7 @@ CODE    OUTPUT
 \"      double quote
 \\      backslash
 \n      newline
-\r      carriage return
+       carriage return
 \t      tab
 \b      backspace
 \f      form feed

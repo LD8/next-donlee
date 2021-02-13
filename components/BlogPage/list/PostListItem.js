@@ -11,6 +11,7 @@ export default function PostListItem({ slug, date, title, summary, tags }) {
         </Link>
       </h2>
       <Tags tags={tags} />
+      {/* TODO: add tags for each post */}
       <p className='summary'>
         <Link href={`/blog/${slug}`}>
           <a>{summary}</a>

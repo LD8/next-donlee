@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 * Collapsible button:
 

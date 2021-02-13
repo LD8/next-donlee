@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: 'Daily Notes: Ubuntu Commands'
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 # Ubuntu Commands

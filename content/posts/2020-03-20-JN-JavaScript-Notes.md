@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "JavaScript Notes: Recap"
-categories: JavaScript Notes
+tags: JavaScript Notes
 ---
 
 ## The wired universe of JS

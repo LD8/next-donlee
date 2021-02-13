@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Django Deployment: Use environment variables"
-categories: Django Deployment
+tags: Django Deployment
 ---
 # [Benefits of environment variables](https://hyperlane.co/blog/the-benefits-of-environment-variables-and-how-to-use-them)
 

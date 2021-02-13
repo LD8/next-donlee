@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 Overall length of usage: 15 ~ 25 hours  
 It highly depends on the way you use it:

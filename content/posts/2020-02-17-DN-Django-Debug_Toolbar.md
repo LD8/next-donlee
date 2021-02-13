@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: RWiR - Debug Toolbar"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ### ## [Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/index.html)

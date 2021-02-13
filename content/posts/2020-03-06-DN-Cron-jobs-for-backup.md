@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: 'Daily Notes: Cron Jobs setting for Backups'
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## Cron jobs research notes

@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 # git branch
 I gather that if you are collaborating on the same project, everyone needs to work on a branch of their own master branch, so that when someone pull from your master branch, they won't get a half finished work. Meanwhile, when you push to remote origin, push from the local master branch which should always be stable, tested and working.

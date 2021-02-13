@@ -39,6 +39,7 @@ export const PostDetail = ({ slug, title, tags, date, content }) => {
 }
 
 const SPostDetail = styled.div`
+  /* TODO: reading experience optimization */
   width: 100%;
   max-width: 800px;
   margin: 0 auto;

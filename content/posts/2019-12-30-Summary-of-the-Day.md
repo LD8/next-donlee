@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 title: Summary of the Day
 ---
 ### Django _Learning Log_ rebuild project notes:

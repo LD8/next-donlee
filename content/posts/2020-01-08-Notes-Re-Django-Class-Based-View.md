@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 # [Introduction: Class-based Views](https://docs.djangoproject.com/en/3.0/topics/class-based-views/)
 - **WHY class-based views**:

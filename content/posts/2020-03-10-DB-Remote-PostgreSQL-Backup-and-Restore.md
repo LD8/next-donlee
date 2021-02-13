@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "DATABASE: PostgreSQL Backup and Restore (remote)"
-categories: Database
+tags: Database
 ---
 ### First, the basics of backing up PostgresSQL db. Then I'll record how I back up my own database on server for future reference.
 # The Basics

@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "React Router"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## React Router Notes

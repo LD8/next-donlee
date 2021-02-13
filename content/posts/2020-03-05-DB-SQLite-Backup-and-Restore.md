@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "DATABASE: SQLite Backup and Restore"
-categories: Database
+tags: Database
 ---
 This post is about: backup an SQLite database on the server, then download it, restore the data locally at the end. This practice is for me to gain confidence in backing up important data.
 

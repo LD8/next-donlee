@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 ## Heroku installation to local
 Register a heroku account. And then simply follow the instruction on [Heroku.com](https://devcenter.heroku.com/articles/heroku-cli) to install Heroku and Heroku CLI on your local computer

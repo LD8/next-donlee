@@ -4,6 +4,7 @@ export default function Quote({ show = false }) {
   return (
     <SQuote show={show}>
       <p>
+        {/* TODO: update texts */}
         " As one looked at that dead leaf with all its beauty and colour, maybe
         one would very deeply comprehend, be aware of, what one's own death must
         be, not at the very end but at the very beginning "

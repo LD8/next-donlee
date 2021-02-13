@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "React Django Integration"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## Make a Django app as usual

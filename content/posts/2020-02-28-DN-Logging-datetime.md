@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: RWiR - DJango Logging, datetime module"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## write log

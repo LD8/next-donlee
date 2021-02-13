@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 # CSV  
 comma-separated values

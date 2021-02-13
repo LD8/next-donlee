@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "JavaScript Notes: DOM Manipulation Recap"
-categories: JavaScript Notes
+tags: JavaScript Notes
 ---
 
 ## [DOM manipulation](https://www.youtube.com/watch?v=eaLKqoB9Fu0&list=PLWKjhJtqVAbllLK6r2dnGjUVWB_cFNcuO&index=2&t=0s)

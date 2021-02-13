@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 title: 404 and 500 Customisation - Django
 ---
 ### Simple 3 Steps

@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "Django & React Notes: The Combine"
-categories: Django & React
+tags: Django React
 ---
 
 ## 

@@ -1,8 +1,8 @@
 ---
-layout: post
+ 
 title:  "Daily Notes: Retail Website in Russian P1"
 date:   2020-02-04 10:50:17 +0800
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## Django:

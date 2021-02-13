@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 Simpler than I thought to set up a jekyll static website up and running with github pages:  
 1. clone a repo created with the name: `<githubUserName>.github.io`

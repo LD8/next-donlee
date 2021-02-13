@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 #### A bit chaotic this afternoon
 something to note here when rebuilding or constructing a new project on Django

@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 title: Easiest Way to Connect Local Folder to GitHub
 --- 
 New to GitHub, still trying to figure out the mechanism and here're some notes re _how to connect local folder with a repo and vice versa_:

@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "Daily Notes: Mosh Setup"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 I couldn't stand the lagging on SSH anymore. In order to have a better connection with the VPS, I decided to use `Mosh`.

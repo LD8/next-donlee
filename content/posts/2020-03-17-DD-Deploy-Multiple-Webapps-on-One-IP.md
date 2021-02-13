@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "Django Deployment: Deploy Multiple Webapps under Single IP"
-categories: Django Deployment
+tags: Django Deployment
 ---
 
 ## Following previous post for deployment on 2020-02-29 (LEAP DAY!!)

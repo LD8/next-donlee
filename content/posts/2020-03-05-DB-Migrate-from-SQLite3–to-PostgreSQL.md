@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title:  "DATABASE: Migrate from SQLite3 to PostgreSQL"
-categories: Database
+tags: Database
 ---
 # Objectives
 Two databases were setup on server, `sqlite` is for development, `PostgreSQL` is for production. It is probably a stupid idea in the first place: because of an environment variable error, `sqlite` was still being used in production and user has been uploading data (files and pictures) for a while. I now need to change the database to `PostgreSQL` on the server without losing the data.

@@ -16,7 +16,7 @@ export const PostList = ({ postsData }) => {
       </Head>
 
       <section className='brief'>
-        <h3>Posts about my life and work.</h3>
+        <h3>Search</h3>
       </section>
 
       <section className='posts'>
@@ -32,9 +32,9 @@ export const PostList = ({ postsData }) => {
 const SBlog = styled.div`
   width: 100%;
   max-width: 600px;
-  /* z-index: 10; */
+  padding: 4vh 0;
   .brief {
-    margin: 3vh 0 5vh 0;
+    margin-bottom: 5vh;
     h3 {
       text-align: center;
       font-size: 25px;

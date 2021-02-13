@@ -1,7 +1,7 @@
 ---
-layout: post
+ 
 title: "Daily Notes: Reading Notes"
-categories: Daily Notes
+tags: Daily Notes
 ---
 
 ## [HOW TO BECOME A FULL STACK DEVELOPER IN 90 DAYS](https://skillcrush.com/blog/how-to-become-a-full-stack-developer/)

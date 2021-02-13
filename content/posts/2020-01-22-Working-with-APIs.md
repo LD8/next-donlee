@@ -1,5 +1,5 @@
 ---
-layout: post
+ 
 ---
 ## process
 It's actually easier than I thought it would be. All you have to do is:
