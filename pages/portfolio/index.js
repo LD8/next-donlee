@@ -6,6 +6,7 @@ export default function ShowcaseListPage(props) {
 }
 
 export async function getStaticProps() {
+  // console.log(getAllShowcases())
   return {
     props: { showcases: getAllShowcases() },
   }

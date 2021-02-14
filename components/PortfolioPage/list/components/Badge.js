@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 
-export default function TechLabel({ isClicked, label, index }) {
+export default function Badge({ isClicked, badgeName, index }) {
   const labelProps = useSpring({
     opacity: isClicked ? 1 : 0,
     transform: `translateY(${isClicked ? 0 : -20}px)`,
@@ -12,7 +12,7 @@ export default function TechLabel({ isClicked, label, index }) {
 
   return (
     <animated.div style={labelProps}>
-      <SLi>{label}</SLi>
+      <SLi>{badgeName}</SLi>
     </animated.div>
   )
 }

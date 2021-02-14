@@ -20,10 +20,6 @@ techs:
   - React
   - UmiJS
   - Webpack
-links:
-  {
-    online: https://metta-forum.herokuapp.com/,
-    github: https://github.com/LD8/metta,
-  }
+links: {}
 startedAt: 2020-5
 endedAt: on-going

@@ -1,19 +1,9 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-// import TechLabels from './TechLabels'
+import Badges from './Badges'
 
-export default function Showcase({
-  slug,
-  title,
-  summary,
-  imgSrcArr,
-  content,
-  techs,
-  links,
-  startedAt,
-  endedAt,
-}) {
+export default function Showcase({ slug, title, imgSrcArr, badges }) {
   const [isClicked, setIsClicked] = useState(false)
   const { opacity, transform } = useSpring({
     opacity: isClicked ? 1 : 0,
@@ -38,18 +28,17 @@ export default function Showcase({
           opacity,
           transform: transform.interpolate((t) => `${t} rotateX(180deg)`),
         }}
-        src={imgSrcArr[1]}
+        src={imgSrcArr.length < 2 ? imgSrcArr[0] : imgSrcArr[1]}
         alt={`Project: ${title} for the back of the card`}
       />
-      {/* {isClicked && (
-        <TechLabels
-          url={url}
+      {isClicked && (
+        <Badges
           slug={slug}
           title={title}
-          labels={labels}
+          badges={badges}
           isClicked={isClicked}
         />
-      )} */}
+      )}
     </SCard>
   )
 }

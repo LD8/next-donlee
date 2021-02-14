@@ -1,10 +1,9 @@
+import Link from 'next/link'
+import { animated, useSpring } from 'react-spring'
 import styled from 'styled-components'
-import TechLabel from './TechLabel'
-import { useSpring, animated } from 'react-spring'
-import { Link } from 'react-router-dom'
-import slugifyText from '../Utils.js'
+import Badge from './Badge'
 
-export default function TechLabels({ url, id, name, labels, isClicked }) {
+export default function Badges({ slug, title, badges, isClicked }) {
   const labelProps = useSpring({
     opacity: isClicked ? 1 : 0,
     transform: `translateY(${isClicked ? 0 : -10}px)`,
@@ -15,25 +14,26 @@ export default function TechLabels({ url, id, name, labels, isClicked }) {
 
   return (
     <STechLabels id='STechLabels'>
-      <animated.h4 style={labelProps}>{name}</animated.h4>
+      <animated.h4 style={labelProps}>{title}</animated.h4>
       <ul>
-        {labels
-          ? labels.map((label, index) => (
-              <TechLabel
-                key={index}
-                isClicked={isClicked}
-                label={label}
-                index={index}
-              />
-            ))
-          : null}
+        {badges &&
+          badges.map((badgeName, i) => (
+            <Badge
+              key={badgeName}
+              isClicked={isClicked}
+              badgeName={badgeName}
+              index={i}
+            />
+          ))}
       </ul>
-      <Link to={`${url}/showcases/${id}/${slugifyText(name)}`}>
-        <TechLabel
-          isClicked={isClicked}
-          label={'more...'}
-          index={labels ? labels.length + 8 : 8}
-        />
+      <Link href={`/portfolio/${slug}`}>
+        <a>
+          <Badge
+            isClicked={isClicked}
+            badgeName={'more...'}
+            index={badges ? badges.length + 1 : 1}
+          />
+        </a>
       </Link>
     </STechLabels>
   )

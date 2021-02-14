@@ -14,11 +14,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  // Fetch necessary data for the blog post using params.slug
-  const postData = await getPostData(params.slug)
+  // Fetch necessary data for the detail page using params.slug
   return {
     props: {
-      ...postData,
+      ...(await getPostData(params.slug)),
     },
   }
 }

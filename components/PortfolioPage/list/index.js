@@ -19,13 +19,14 @@ export const ShowcaseList = ({ showcases }) => {
         </h3>
       </section>
 
-      <section className='labels'>
+      <section className='badges'>
         <p>Click a label for related projects</p>
         <ul>
-          {/* {labels.map(({ name: label, id }, index) => (
+          {/* TODO: badges */}
+          {/* {badges.map(({ name: label, id }, index) => (
             <Link
               key={index}
-              to={`${url}/showcases/labels/${id}/${slugifyText(label)}`}
+              to={`${url}/showcases/badges/${id}/${slugifyText(label)}`}
             >
               <TechLabelSwitch label={label} id={id} />
             </Link>
@@ -57,7 +58,7 @@ const SMyPortfolio = styled.div`
       }
     }
   }
-  .labels {
+  .badges {
     margin: 0 auto 3vh auto;
     width: 90%;
     display: flex;
