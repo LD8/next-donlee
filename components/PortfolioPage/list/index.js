@@ -6,7 +6,7 @@ import Showcase from './components/Showcase'
 export const ShowcaseList = ({ showcases }) => {
   const ref = useRefToSetHeight()
   return (
-    <SMyPortfolio id='SMyPortfolio' ref={ref}>
+    <SShowcase id='SShowcase' ref={ref}>
       <Head>
         <title>Peiwen Li's Portfolio</title>
       </Head>
@@ -39,11 +39,11 @@ export const ShowcaseList = ({ showcases }) => {
           <Showcase key={showcase.slug} {...showcase} />
         ))}
       </section>
-    </SMyPortfolio>
+    </SShowcase>
   )
 }
 
-const SMyPortfolio = styled.div`
+const SShowcase = styled.div`
   max-width: 1000px;
   .brief {
     padding: 3vh 0 5vh 0;

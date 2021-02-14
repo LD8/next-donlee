@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default function Links({ links }) {
+export default function Resources({ links }) {
   return (
     <section>
       <h2>Resources</h2>

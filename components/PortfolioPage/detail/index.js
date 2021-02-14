@@ -1,8 +1,8 @@
-import Carousel from './Carousel'
 import useRefToSetHeight from '@/lib/useRefToSetHeight'
 import Head from 'next/head'
 import styled from 'styled-components'
-import Links from './Links'
+import Carousel from './Carousel'
+import Resources from './Resources'
 
 export const ShowcaseDetail = ({
   slug,
@@ -17,15 +17,7 @@ export const ShowcaseDetail = ({
   badges,
 }) => {
   const ref = useRefToSetHeight()
-  const beganAt = (startedAt, endedAt) => {
-    if (!endedAt || endedAt.split(' ').length === 1) {
-      // if endedAt is either 'on-going' or 'now'
-      return startedAt
-    }
-    if (startedAt.split(' ')[1] === endedAt.split(' ')[1]) {
-      return startedAt.split(' ')[0]
-    }
-  }
+  // TODO: to make this server side code
   return (
     <SCaseDetail id='SCaseDetail' ref={ref}>
       <Head>
@@ -40,10 +32,10 @@ export const ShowcaseDetail = ({
 
       <section className='about'>
         <h2>About this project</h2>
-        {content && content.map((paragraph) => <p>{paragraph}</p>)}
+        {content && content.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
         <p className='dates'>
           Project duration: {'  '}
-          <span>{beganAt(startedAt, endedAt)}</span> - <span>{endedAt}</span>
+          <span>{startedAt}</span> - <span>{endedAt}</span>
         </p>
       </section>
 
@@ -52,7 +44,7 @@ export const ShowcaseDetail = ({
         <ul>{techs && techs.map((tech, i) => <li key={i}>{tech}</li>)}</ul>
       </section>
 
-      {links && <Links links={links} />}
+      {links && Object.keys(links).length !== 0 && <Resources links={links} />}
     </SCaseDetail>
   )
 }

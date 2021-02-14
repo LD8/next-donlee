@@ -6,9 +6,9 @@ import Icon from './Icon'
 export const mainDivHeightContext = createContext()
 
 export default function Main({ children, show }) {
-  const footerContent = FOOTER_ICONS.map((i) => <Icon key={i.name} {...i} />)
   const [height, setHeight] = useState(0)
   const { Provider } = mainDivHeightContext
+  const footerContent = FOOTER_ICONS.map((i) => <Icon key={i.name} {...i} />)
   return (
     <SMainWrapper id='SMainWrapper' show={show}>
       <Provider value={setHeight}>

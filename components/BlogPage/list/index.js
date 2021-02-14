@@ -33,8 +33,8 @@ const SBlog = styled.div`
   width: 100%;
   max-width: 600px;
   padding: 4vh 0;
-  @media only screen and (max-width: 400px) {
-    max-width: 350px;
+  @media only screen and (max-width: 800px) {
+    max-width: 94vw;
   }
   .brief {
     margin-bottom: 5vh;

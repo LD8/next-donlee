@@ -29,6 +29,7 @@ export default function Icon({ name, imageSource, altText, href }) {
 
 const SIcon = styled.div`
   height: 100%;
+  max-width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;

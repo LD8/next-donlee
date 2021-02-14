@@ -19,7 +19,7 @@ const SQuote = styled.div`
   position: absolute;
   bottom: 0;
   padding: 10px 20px;
-  min-width: 350px;
+  /* min-width: 350px; */
   max-width: 880px;
   text-align: center;
   color: white;
