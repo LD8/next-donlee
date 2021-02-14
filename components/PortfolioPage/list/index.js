@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import Showcase from './components/Showcase'
 
 export const ShowcaseList = ({ showcases }) => {
-  const ref = useRefToSetHeight()
   return (
-    <SShowcase id='SShowcase' ref={ref}>
+    <SShowcase id='SShowcase' ref={useRefToSetHeight()}>
       <Head>
         <title>Peiwen Li's Portfolio</title>
       </Head>

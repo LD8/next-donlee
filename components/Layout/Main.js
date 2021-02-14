@@ -20,6 +20,8 @@ export default function Main({ children, show }) {
 }
 
 const SMainWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
   opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
   min-height: 93vh;

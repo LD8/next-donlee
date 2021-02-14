@@ -16,10 +16,9 @@ export const ShowcaseDetail = ({
   endedAt,
   badges,
 }) => {
-  const ref = useRefToSetHeight()
   // TODO: to make this server side code
   return (
-    <SCaseDetail id='SCaseDetail' ref={ref}>
+    <SCaseDetail id='SCaseDetail' ref={useRefToSetHeight()}>
       <Head>
         <title>{title}</title>
       </Head>
