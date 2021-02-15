@@ -6,7 +6,7 @@ export const mainDivHeightContext = createContext()
 export default function Main({ children, show, isPostPage }) {
   const [height, setHeight] = useState(0)
   const { Provider } = mainDivHeightContext
-  console.log(isPostPage)
+
   return (
     <SMain id='SMain' show={show} style={{ height }} isPostPage={isPostPage}>
       <Provider value={setHeight}>{children}</Provider>
@@ -22,7 +22,8 @@ const SMain = styled.div`
   align-items: center;
   opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
-  min-height: ${({ isPostPage }) => (isPostPage===true ? 'calc(93vh - 80px)' : 'calc(93vh - 160px)')};
+  min-height: ${({ isPostPage }) =>
+    isPostPage === true ? 'calc(93vh - 80px)' : 'calc(93vh - 160px)'};
   /* height: 1000px; */
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 0 20px var(--bg-shadow-color);

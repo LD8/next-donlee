@@ -1,10 +1,11 @@
-// import App from 'next/app'
 import { animated, config, useTransition } from 'react-spring'
 import { Layout } from '../components'
 import '../styles/global.css'
 
 export default function MyApp({ Component, pageProps, router }) {
-  // console.log(router.pathname)
+  const { pathname } = router
+  const isCVPage = pathname === '/cv' || pathname === '/cv-zh'
+
   const transitions = useTransition([Component], (c) => c, {
     from: {
       opacity: 0,
@@ -22,10 +23,11 @@ export default function MyApp({ Component, pageProps, router }) {
       transform: 'translate3d(-100%,0,0)',
     },
     config: config.gentle,
-    // delay: () => (router.pathname === '/' ? 2000 : 0),
   })
 
-  return (
+  return isCVPage ? (
+    <Component {...pageProps} />
+  ) : (
     <Layout>
       {transitions.map(({ item: Component, props, key }) => (
         <animated.div key={key} style={props}>
@@ -35,16 +37,3 @@ export default function MyApp({ Component, pageProps, router }) {
     </Layout>
   )
 }
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-
-// MyApp.getInitialProps = async (appContext) => {
-//   // console.log('appContext: ', appContext)
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext)
-//   // console.log('appProps: ', appProps)
-//   return { ...appProps }
-// }

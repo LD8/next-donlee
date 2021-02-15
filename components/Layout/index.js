@@ -1,11 +1,11 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import Dimmer from './Dimmer'
+import Footer from './Footer'
 import Main from './Main'
 import Nav from './Nav'
 import Quote from './Quote'
-import Footer from './Footer'
-import Dimmer from './Dimmer'
-import Head from 'next/head'
 
 export const Layout = ({ children }) => {
   const { pathname } = useRouter()

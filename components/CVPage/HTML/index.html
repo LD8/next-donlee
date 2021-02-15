@@ -1,0 +1,27 @@
+{% extends 'frontend/base.html' %}
+
+{% load static %}
+
+{% block ogImage %}
+<meta property="og:site_name" content="Peiwen Li" />
+<meta property="og:title" content="Peiwen Li" />
+<meta property="og:description"
+  content="Peiwen Li's website page, displaying his work, his blog, his passion. He is passionate in developing software that improves our lives both physically and mentally" />
+<meta property="og:image" itemprop="image" content="https://donlee.online/static/frontend/favicon.ico" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:type" content="website" />
+
+<meta property="og:updated_time" content="1588497367" />
+<meta property="og:url" content="https://donlee.online" />
+{% endblock ogImage %}
+
+{% block title %}
+<title>Peiwen Li</title>
+{% endblock title %}
+
+{% block content %}
+<div id="root"></div>
+<script src="{% static 'frontend/main.js' %}"></script>
+{% endblock content %}

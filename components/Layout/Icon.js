@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { animated, useSpring } from 'react-spring'
 import styled from 'styled-components'
+import { ExternalLink } from '..'
 
 export default function Icon({ name, imageSource, altText, href, isPostPage }) {
   const [isHovered, set] = useState(false)
@@ -13,7 +14,7 @@ export default function Icon({ name, imageSource, altText, href, isPostPage }) {
 
   return (
     <SIcon id={`SIcon_${name}`} isPostPage={isPostPage}>
-      <a target='_blank' rel='noopener noreferrer' href={href}>
+      <ExternalLink href={href}>
         <animated.img
           src={imageSource}
           alt={altText}
@@ -21,7 +22,7 @@ export default function Icon({ name, imageSource, altText, href, isPostPage }) {
           onMouseLeave={() => set(false)}
           style={hoveredProps}
         />
-      </a>
+      </ExternalLink>
       <p>{name}</p>
     </SIcon>
   )

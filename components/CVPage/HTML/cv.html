@@ -1,0 +1,284 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+
+{% block ogImage %}
+<meta property="og:site_name" content="Peiwen Li's CV" />
+<meta property="og:title" content="Peiwen Li's CV" />
+<meta property="og:description" content="Peiwen Li's CV, Resumé" />
+<meta property="og:image" itemprop="image" content="https://donlee.online/static/frontend/img/cv-portrait-sm.jpg" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+<meta property="og:type" content="website" />
+
+<meta property="og:updated_time" content="1588497367" />
+<meta property="og:url" content="https://donlee.online/cv" />
+{% endblock ogImage %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'frontend/css/cv.css' %}" />
+{% endblock stylesheet %}
+
+{% block title %}
+<title>Peiwen Li's CV</title>
+{% endblock title %}
+
+{% block content %}
+<main id="SPaper">
+  <div class="lang-switch-btn"><a href="{% url 'frontend:cv-zh' %}">中 / EN</a></div>
+  <section class="title">
+    <div class="portrait-container">
+      <img src="{% static 'frontend/img/cv-portrait-sm.jpg' %}" alt="Peiwen Li's portrait" />
+    </div>
+    <div class="info">
+      <div class="general-info">
+        <h1>Peiwen Li</h1>
+        <h2>Full-stack Software Developer</h2>
+        <p>
+          Passionate in developing software that brings happiness and light into our lives
+        </p>
+      </div>
+      <div class="contact-info">
+        <a target="_blank" rel="noopener noreferrer" href="http://donlee.online">
+          www.donlee.online
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto: don_lee@me.com">
+          don_lee@me.com
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/LD8">
+          github.com/LD8
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="sub-title">
+      <h3>Skills</h3>
+    </div>
+    <div class="sub-container">
+      <div class="aside"></div>
+      <div class="details">
+        <ul>
+          <li>Front-end: JavaScript ES6, React (with Hooks), Webpack, HTML5, CSS3</li>
+          <li>Back-end: Python, Django, Flask, Postgres</li>
+          <li>Data Visualisation: Python, Plotly, Matplotlib</li>
+          <li>UI/UX: having a master degree in Art and Science, I am confident in designing, coding and executing multi-disciplinary projects with great scrutiny</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="sub-title">
+      <h3>Experience</h3>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="company-name">Chaintor Tech</p>
+        <p class="year">May 2020 - Now</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.chaintor.com/">
+          chaintor.com
+        </a>
+      </div>
+      <div class="details">
+        <h4>UI UX Designer and Web Developer</h4>
+        <ul>
+          <li>Web Dev: Efficiently develop web apps with React, TypeScript alongside libraries and frameworks such as antd and umi etc.</li>
+          <li>UI&UX Design: Design easy-to-use web UI, unify design language,  prototyping with Adobe XD, editing design documents including frontend execution regulations etc.</li>
+          <li>Execution: Lead the frontend team to deliver the design in high quality, weekly UI inspection, providing chances to revise and deepen the design especially in the respect of UX</li>
+          <li>Communication: Become the tunnels connecting project manager, demand sector, frontend leader and backend leader, so projects run more smoothly</li>
+        </ul>
+        <p>Participating in high profile projects right after joining the company was a challenge as well as a bless. During these projects, I single-handedly transformed the way in which the team members develop websites. The inception of UI/UX design process within the team was the first step. An innovative B2B web based quantitative trading system with relatively complicated UI had reached its alpha phase after 2-month development. The product now has become the main self-developed product of the company.</p>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="company-name">Freelance</p>
+        <p class="year">June 2019 - May 2020</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.donlee.online">
+          donlee.online
+        </a>
+      </div>
+      <div class="details">
+        <h4>User Experience and Web app Designer</h4>
+        <!-- <p>{description && description}</p> -->
+        <ul>
+          <li>Build interactive web apps for clients - Design the interactivity, user experience and data structure based on their business models and requirement</li>
+          <li>Develop web apps independently, mainly coding in JavaScript (React), Python (Django), PostgreSQL, HTML5, CSS3</li>
+          <li>Portfolio: <a target="_blank" rel="noopener noreferrer" href="https://donlee.online/portfolio">donlee.online/portfolio</a></li>
+        </ul>
+        <!-- <p>{ending && ending}</p> -->
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="company-name">ACG International</p>
+        <p class="year">June 2017 - June 2019</p>
+        <a target="_blank" rel="noopener noreferrer" href="www.acg-art.com">
+          acg-art.com
+        </a>
+      </div>
+      <div class="details">
+        <h4>Instructor — Art and Design</h4>
+        <ul>
+          <li>Teach applied arts, primarily interior design and analogue photography process to students for portfolio
+            building and personal development in related subjects</li>
+          <li>Develop curriculum and prepare outlines for workshops</li>
+          <li>Provide individualised tutorial or remedial instruction</li>
+          <li>Supervise independent projects and hands-on training</li>
+          <li>Advise students on program curricula and career decisions</li>
+        </ul>
+        <p>In these two years as a teacher, 32 amongst 34 of my students have successfully secured offers from
+          prestigious art institutions across UK, France, US, Canada, Australia, students majored in Interior design,
+          photography and landscape design both on BA level (40%) and MA level (60%). While helping my lovely students
+          embarking on their great journey, for consistently growing interests, I have been studying web design languages
+          since 2016</p>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="company-name">British Library</p>
+        <p class="year">May - November 2015</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.bl.uk/">
+          bl.uk
+        </a>
+      </div>
+      <div class="details">
+        <h4>Volunteer Interpreter</h4>
+        <p>Interpreting and translating Chinese minority manuscripts mainly scores. Only after being interpreted in
+          Pinyin can they be further studied.</p>
+        <p>Nearly 100 scripts were translated in half year. I am thrilled to have helped the study and have participated
+          in the dissemination of Chinese minority culture in an international context</p>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="company-name">M Moser Associates</p>
+        <p class="year">May 2011 - May 2013</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.mmoser.com">
+          mmoser.com
+        </a>
+      </div>
+      <div class="details">
+        <h4>Project Coordinator and Interior Designer</h4>
+        <p>From a project coordinator to a designer who leads a small team, my duty had grown drastically, including:
+        </p>
+        <ul>
+          <li>drawing draft plans, construction plans and detail plans</li>
+          <li>putting together project presentations</li>
+          <li>conveying design ideas to clients in presentations</li>
+          <li>on site construction management</li>
+        </ul>
+        <p>In these two years, I participated in 1 large project over 2000 sqm, 2 medium projects over 1000 sqm and 4
+          smaller projects just under 500 sqm, all of which were successfully delivered on schedule. During this time, I
+          tasted the fruit of seamless team work, gained understanding of project management, realising that much
+          knowledge to be learnt, followed by further study in the UK</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="education">
+    <div class="sub-title">
+      <h3>Education</h3>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="year">2018 - 2020</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.interaction-design.org">
+          interaction-design.org
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.freecodecamp.com">
+          freecodecamp.com
+        </a>
+      </div>
+      <div class="details">
+        <h4>Frontend Programmer Certificate, UI Design Practice</h4>
+        <p>FreeCodeCamp, Interaction Design Foundation</p>
+        <h6>Online and self-taught</h6>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="year">2014 - 2016</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.arts.ac.uk">
+          arts.ac.uk
+        </a>
+      </div>
+      <div class="details">
+        <h4>MA. in Art and Science</h4>
+        <p>Central Saint Martins, University of Arts London</p>
+        <h6>London, UK</h6>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="year">2013 - 2014</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.csvpa.com">
+          csvpa.com
+        </a>
+      </div>
+      <div class="details">
+        <h4>Pre MA.</h4>
+        <p>Cambridge School of Visual and Performing Arts</p>
+        <h6>Cambridge, UK</h6>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="year">2009 - 2011</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.shnu.edu.cn">
+          shnu.edu.cn
+        </a>
+      </div>
+      <div class="details">
+        <h4>Certificate - Interior Design</h4>
+        <p>Shanghai Normal university</p>
+        <h6>Shanghai, China</h6>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside">
+        <p class="year">2006 - 2010</p>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.tongji.edu.cn">
+          tongji.edu.cn
+        </a>
+      </div>
+      <div class="details">
+        <h4>BSc. Intelligent building and Technology</h4>
+        <p>Tongji University</p>
+        <h6>Shanghai, China</h6>
+      </div>
+    </div>
+  </section>
+
+  <section class="other">
+    <div class="sub-title">
+      <h3>Other Perks</h3>
+    </div>
+
+    <div class="sub-container">
+      <div class="aside"></div>
+      <div class="details">
+        <ul>
+          <li>
+            Speaks fluent English (IELTS 8.0), native Mandarin and basic
+            French
+          </li>
+          <li>In his free time, likes to read, blog, swim, photography and travel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}

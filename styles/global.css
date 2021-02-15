@@ -13,6 +13,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+
+  /* ------------- CV Page Vars ------------- */
+  --theme-color: rgb(0, 90, 190);
+  --whole-width: 842px;
+  --aside-width: 170px;
+  --main-width: 510px;
+  --fontXL: 30px;
+  --fontL: 25px;
+  --fontM: 16px;
+  --fontS: 13px;
+  --paper-padding: 80px;
+
+  @media only screen and (max-width: 800px) {
+    --whole-width: 100%;
+    --aside-width: 100%;
+    --main-width: 100%;
+  }
 }
 
 code {
@@ -31,7 +48,7 @@ code {
   --whitegreen: rgb(200, 230, 200);
   --titlegrey: rgb(130, 140, 130); /* for titles visited on blog list view && tags background*/
   --title: rgb(200, 200, 200);
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(36, 39, 33);
   /* background-color: rgb(150, 150, 150); */
   scroll-behavior: smooth;
 }
