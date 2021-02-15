@@ -5,8 +5,9 @@ import Skills from './Skills'
 import useRefToSetHeight from '@/lib/useRefToSetHeight'
 
 export const AboutPage = () => {
+  const ref = useRefToSetHeight()
   return (
-    <SMyInfo id='SMyInfo' ref={useRefToSetHeight()}>
+    <SMyInfo id='SMyInfo' ref={ref}>
       <Head>
         <title>About Peiwen Li</title>
       </Head>

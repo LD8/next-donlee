@@ -16,14 +16,14 @@ export default function Main({ children, show, isPostPage }) {
 
 const SMain = styled.div`
   position: relative;
-  overflow: scroll;
+  overflow: ${({ isPostPage }) => (isPostPage ? 'scroll' : 'hidden')};
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
   min-height: ${({ isPostPage }) =>
-    isPostPage === true ? 'calc(93vh - 80px)' : 'calc(93vh - 160px)'};
+    isPostPage ? 'calc(93vh - 80px)' : 'calc(93vh - 160px)'};
   /* height: 1000px; */
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 0 20px var(--bg-shadow-color);

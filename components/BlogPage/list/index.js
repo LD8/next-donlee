@@ -1,15 +1,22 @@
 import useRefToSetHeight from '@/lib/useRefToSetHeight'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import PostListItem from './PostListItem'
+import Pagination from './Pagination'
 
 export const PostList = ({ postsData }) => {
+  const ref = useRefToSetHeight()
+  const {
+    query: { page = 1, size = 5 },
+  } = useRouter()
+
   // console.log('postsData: ', postsData)
-  // TODO: 分页
   // TODO: 标签查询 filter postsData
   // TODO: 全局 input 搜索
+
   return (
-    <SBlog id='SBlog' ref={useRefToSetHeight()}>
+    <SBlog id='SBlog' ref={ref}>
       <Head>
         <title>Peiwen Li's Blog</title>
       </Head>
@@ -20,10 +27,13 @@ export const PostList = ({ postsData }) => {
 
       <section className='posts'>
         <ul>
-          {postsData &&
-            postsData.map((p) => <PostListItem key={p.slug} {...p} />)}
+          {postsData?.slice((page - 1) * size, page * size).map((p) => (
+            <PostListItem key={p.slug} {...p} />
+          ))}
         </ul>
       </section>
+
+      <Pagination total={postsData?.length} />
     </SBlog>
   )
 }

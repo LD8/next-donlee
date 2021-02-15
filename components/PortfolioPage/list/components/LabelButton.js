@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { animated, useSpring } from 'react-spring'
+import styled from 'styled-components'
 
 export default function TechLabelSwitch({ label, id }) {
   const [activated, setActivated] = useState(false)

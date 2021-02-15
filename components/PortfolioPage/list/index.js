@@ -1,11 +1,13 @@
-import Head from 'next/head'
 import useRefToSetHeight from '@/lib/useRefToSetHeight'
+import Head from 'next/head'
 import styled from 'styled-components'
 import Showcase from './components/Showcase'
 
 export const ShowcaseList = ({ showcases }) => {
+  const ref = useRefToSetHeight()
+
   return (
-    <SShowcase id='SShowcase' ref={useRefToSetHeight()}>
+    <SShowcase id='SShowcase' ref={ref}>
       <Head>
         <title>Peiwen Li's Portfolio</title>
       </Head>
@@ -21,8 +23,8 @@ export const ShowcaseList = ({ showcases }) => {
       <section className='badges'>
         <p>Click a label for related projects</p>
         {/* <ul> */}
-          {/* TODO: badges */}
-          {/* {badges.map(({ name: label, id }, index) => (
+        {/* TODO: badges */}
+        {/* {badges.map(({ name: label, id }, index) => (
             <Link
               key={index}
               to={`${url}/showcases/badges/${id}/${slugifyText(label)}`}
@@ -34,7 +36,7 @@ export const ShowcaseList = ({ showcases }) => {
       </section>
 
       <section className='showcases'>
-        {showcases && showcases.map((showcase) => (
+        {showcases?.map((showcase) => (
           <Showcase key={showcase.slug} {...showcase} />
         ))}
       </section>

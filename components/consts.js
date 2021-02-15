@@ -1,6 +1,7 @@
 export const NAV_LINKS = [
   { name: 'About', path: '/about' },
   { name: 'Portfolio', path: '/portfolio' },
+  // { name: 'Blog', path: '/blog?page=1&size=5' },
   { name: 'Blog', path: '/blog' },
 ]
 

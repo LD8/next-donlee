@@ -17,8 +17,9 @@ export const ShowcaseDetail = ({
   badges,
 }) => {
   // TODO: add badges
+  const ref = useRefToSetHeight()
   return (
-    <SCaseDetail id='SCaseDetail' ref={useRefToSetHeight()}>
+    <SCaseDetail id='SCaseDetail' ref={ref}>
       <Head>
         <title>{title}</title>
       </Head>
@@ -31,7 +32,7 @@ export const ShowcaseDetail = ({
 
       <section className='about'>
         <h2>About this project</h2>
-        {content && content.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+        {content?.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
         <p className='dates'>
           Project duration: {'  '}
           <span>{startedAt}</span> - <span>{endedAt}</span>
@@ -40,7 +41,7 @@ export const ShowcaseDetail = ({
 
       <section className='technical-sheet'>
         <h2>Technical Sheet</h2>
-        <ul>{techs && techs.map((tech, i) => <li key={i}>{tech}</li>)}</ul>
+        <ul>{techs?.map((tech, i) => <li key={i}>{tech}</li>)}</ul>
       </section>
 
       {links && Object.keys(links).length !== 0 && <Resources links={links} />}

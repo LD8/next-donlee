@@ -16,15 +16,14 @@ export default function Badges({ slug, title, badges, isClicked }) {
     <STechLabels id='STechLabels'>
       <animated.h4 style={labelProps}>{title}</animated.h4>
       <ul>
-        {badges &&
-          badges.map((badgeName, i) => (
-            <Badge
-              key={badgeName}
-              isClicked={isClicked}
-              badgeName={badgeName}
-              index={i}
-            />
-          ))}
+        {badges?.map((badgeName, i) => (
+          <Badge
+            key={badgeName}
+            isClicked={isClicked}
+            badgeName={badgeName}
+            index={i}
+          />
+        ))}
       </ul>
       <Link href={`/portfolio/${slug}`}>
         <a>

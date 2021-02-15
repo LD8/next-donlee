@@ -15,6 +15,10 @@ export default function Nav() {
           <li key={path}>
             <Link href={pathname !== path ? path : '/'}>
               <SAnchor
+                // isActive={
+                //   pathname === path.slice(0, pathname.length) ||
+                //   pathname === '/'
+                // }
                 isActive={pathname === path || pathname === '/'}
                 isHome={pathname === '/'}
               >
