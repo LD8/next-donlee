@@ -8,19 +8,19 @@ export default function Resources({ links }) {
         {links.online && (
           <li>
             <SSpan>Visit the website:</SSpan>
-            <a href={links.online}>{links.online.toUpperCase()}</a>
+            <SLink href={links.online}>{links.online}</SLink>
           </li>
         )}
         {links.github && (
           <li>
             <SSpan>GitHub source files:</SSpan>
-            <a href={links.github}>{links.github.toUpperCase()}</a>
+            <SLink href={links.github}>{links.github}</SLink>
           </li>
         )}
         {links.codeSandbox && (
           <li>
             <SSpan>Code-Sandbox:</SSpan>
-            <a href={links.codeSandbox}>PORTAL HERE</a>
+            <SLink href={links.codeSandbox}>Portal Here</SLink>
           </li>
         )}
       </ul>
@@ -31,4 +31,8 @@ export default function Resources({ links }) {
 const SSpan = styled.span`
   width: 200px;
   padding-right: 20px;
+`
+const SLink = styled.a`
+  text-transform: uppercase;
+  font-size: smaller
 `

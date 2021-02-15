@@ -16,7 +16,7 @@ export const ShowcaseDetail = ({
   endedAt,
   badges,
 }) => {
-  // TODO: to make this server side code
+  // TODO: add badges
   return (
     <SCaseDetail id='SCaseDetail' ref={useRefToSetHeight()}>
       <Head>

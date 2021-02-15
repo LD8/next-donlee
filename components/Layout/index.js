@@ -10,7 +10,7 @@ export const Layout = ({ children }) => {
   const isLanding = pathname === '/'
 
   return (
-    <SContainer id='SContainer' hasPaddingTop={!isLanding}>
+    <SContainer id='SContainer' isLanding={isLanding}>
       <Head>
         <title>Peiwen Li</title>
       </Head>
@@ -23,7 +23,7 @@ export const Layout = ({ children }) => {
 }
 
 const SContainer = styled.div`
-  padding-top: ${({ hasPaddingTop }) => (hasPaddingTop ? '7vh' : '')};
+  padding-top: ${({ isLanding }) => (isLanding ? '' : '7vh')};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,8 +31,7 @@ const SContainer = styled.div`
 
   background-color: var(--bg-color);
   background-image: url('/bg.jpg');
-  background-repeat: repeat-y;
-  background-size: 100%;
+  background-size: ${({ isLanding }) => (isLanding ? 'cover' : '100%')};
   background-position: top;
 `
 

@@ -31,5 +31,6 @@ code {
   --titlegrey: rgb(130, 140, 130); /* for titles visited on blog list view && tags background*/
   --title: rgb(200, 200, 200);
   z-index: -10;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(30, 30, 30);
+  /* background-color: rgb(150, 150, 150); */
 }
