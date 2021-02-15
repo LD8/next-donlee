@@ -11,7 +11,6 @@ export default function PostListItem({ slug, date, title, summary, tags }) {
         </Link>
       </h2>
       <Tags tags={tags} />
-      {/* TODO: add tags for each post */}
       <p className='summary'>
         <Link href={`/blog/${slug}`}>
           <a>{summary}</a>
@@ -25,7 +24,7 @@ export default function PostListItem({ slug, date, title, summary, tags }) {
 const SPostLi = styled.li`
   width: 90%;
   max-width: 600px;
-  margin: 0 auto 5vh auto;
+  margin: 1rem auto 3rem auto;
   a {
     text-decoration: none;
     :hover {
@@ -47,7 +46,7 @@ const SPostLi = styled.li`
     }
   }
   .summary {
-    margin: 10px 0;
+    margin: 1rem 0;
     font-weight: 350;
     overflow: hidden;
     a {

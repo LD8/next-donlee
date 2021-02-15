@@ -6,7 +6,8 @@ export default function BlogListPage(props) {
 }
 
 export async function getStaticProps() {
+  const { postsData, allTags } = getSortedPostsData()
   return {
-    props: { postsData: getSortedPostsData() },
+    props: { postsData, allTags },
   }
 }
