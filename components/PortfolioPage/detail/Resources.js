@@ -17,10 +17,10 @@ export default function Resources({ links }) {
             <a href={links.github}>{links.github.toUpperCase()}</a>
           </li>
         )}
-        {links.codesandbox && (
+        {links.codeSandbox && (
           <li>
             <SSpan>Code-Sandbox:</SSpan>
-            <a href={links.codesandbox}>PORTAL HERE</a>
+            <a href={links.codeSandbox}>PORTAL HERE</a>
           </li>
         )}
       </ul>

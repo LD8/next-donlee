@@ -20,7 +20,7 @@ export const ShowcaseList = ({ showcases }) => {
 
       <section className='badges'>
         <p>Click a label for related projects</p>
-        <ul>
+        {/* <ul> */}
           {/* TODO: badges */}
           {/* {badges.map(({ name: label, id }, index) => (
             <Link
@@ -30,7 +30,7 @@ export const ShowcaseList = ({ showcases }) => {
               <TechLabelSwitch label={label} id={id} />
             </Link>
           ))} */}
-        </ul>
+        {/* </ul> */}
       </section>
 
       <section className='showcases'>

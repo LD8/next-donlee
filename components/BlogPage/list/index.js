@@ -8,9 +8,8 @@ export const PostList = ({ postsData }) => {
   // TODO: 分页
   // TODO: 标签查询 filter postsData
   // TODO: 全局 input 搜索
-  const ref = useRefToSetHeight()
   return (
-    <SBlog id='SBlog' ref={ref}>
+    <SBlog id='SBlog' ref={useRefToSetHeight()}>
       <Head>
         <title>Peiwen Li's Blog</title>
       </Head>

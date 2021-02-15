@@ -19,9 +19,8 @@ export const renderers = {
 }
 
 export const PostDetail = ({ slug, title, tags, date, content }) => {
-  const ref = useRefToSetHeight()
   return (
-    <SPostDetail id='SPostDetail' ref={ref}>
+    <SPostDetail id='SPostDetail' ref={useRefToSetHeight()}>
       <Head>
         <title>Blog - {title}</title>
       </Head>
