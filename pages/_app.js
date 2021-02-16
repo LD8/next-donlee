@@ -9,12 +9,10 @@ export default function MyApp({ Component, pageProps, router }) {
   const transitions = useTransition([Component], (c) => c, {
     from: {
       opacity: 0,
-      position: 'absolute',
       transform: 'translate3d(100%,0,0)',
     },
     enter: {
       opacity: 1,
-      position: 'absolute',
       transform: 'translate3d(0%,0,0)',
     },
     leave: {

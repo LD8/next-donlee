@@ -4,7 +4,7 @@ import Tags from '../components/Tags'
 
 export default function PostListItem({ slug, date, title, summary, tags }) {
   return (
-    <SPostLi id={`SPostListItem_${slug}`} className='post-list-item'>
+    <SPostLi id={`SPostLi_${slug}`}>
       <h2>
         <Link href={`/blog/${slug}`}>
           <a>{title}</a>
@@ -52,7 +52,7 @@ const SPostLi = styled.li`
     a {
       color: var(--whitegreen);
       :visited {
-        color: var(--fadedgreen);
+        color: var(--titlegrey);
       }
     }
   }

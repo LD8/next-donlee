@@ -1,12 +1,26 @@
+import { useRouter } from 'next/router'
+import { useState } from 'react'
 import styled from 'styled-components'
 
-export default function Search({ v, set }) {
+export default function Search({ resetInputRef }) {
+  const router = useRouter()
+  const { page, size, tag } = router.query
+  const [searchV, setSearchV] = useState('')
+  resetInputRef.current = () => setSearchV('')
+
   return (
-    // TODO: push query to paths
     <SInput
-      value={v}
-      onChange={(e) => set(e.target.value.toLowerCase())}
-      placeholder='Search'
+      value={searchV}
+      onChange={(e) => setSearchV(e.target.value.toLowerCase())}
+      onKeyUp={(e) => {
+        if (e.key === 'Enter') {
+          router.push({
+            pathname: '/blog',
+            query: { page, size, tag, search: searchV },
+          })
+        }
+      }}
+      placeholder='Search a key word'
     />
   )
 }
@@ -23,7 +37,7 @@ const SInput = styled.input`
   height: 30px;
   width: 40%;
   outline: none;
-  margin:0 1rem;
+  margin: 0 1rem;
   :focus {
     border-bottom: 1px solid silver;
   }
