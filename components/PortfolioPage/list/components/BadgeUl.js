@@ -10,9 +10,10 @@ export default function BadgeUl({
   passIndex = false,
   isClicked = true,
   asFilter = false,
+  ...props
 }) {
   return (
-    <SBadgeUl>
+    <SBadgeUl {...props}>
       {badges?.map((badgeName, i) => (
         <Badge
           key={badgeName}

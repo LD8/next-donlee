@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import Carousel from './Carousel'
 import Resources from './Resources'
+import BadgeUl from '../list/components/BadgeUl'
 
 export const ShowcaseDetail = ({
   slug,
@@ -16,7 +17,6 @@ export const ShowcaseDetail = ({
   endedAt,
   badges,
 }) => {
-  // TODO: add badges
   const ref = useRefToSetHeight()
   return (
     <SCaseDetail id='SCaseDetail' ref={ref}>
@@ -27,12 +27,18 @@ export const ShowcaseDetail = ({
       <div className='intro'>
         <h1>{title}</h1>
         <p>{summary}</p>
+        <BadgeUl
+          badges={badges}
+          style={{ justifyContent: 'flex-start', margin: '0 auto 1rem 0' }}
+        />
         <Carousel imgSrcArr={imgSrcArr} />
       </div>
 
       <section className='about'>
         <h2>About this project</h2>
-        {content?.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+        {content?.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
         <p className='dates'>
           Project duration: {'  '}
           <span>{startedAt}</span> - <span>{endedAt}</span>
@@ -41,7 +47,11 @@ export const ShowcaseDetail = ({
 
       <section className='technical-sheet'>
         <h2>Technical Sheet</h2>
-        <ul>{techs?.map((tech, i) => <li key={i}>{tech}</li>)}</ul>
+        <ul>
+          {techs?.map((tech, i) => (
+            <li key={i}>{tech}</li>
+          ))}
+        </ul>
       </section>
 
       {links && Object.keys(links).length !== 0 && <Resources links={links} />}

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { animated, useSpring } from 'react-spring'
+import styled from 'styled-components'
 
 export default function Badge({
   isClicked = true,
@@ -44,7 +44,7 @@ const SLi = styled(animated.li)`
   height: 30px;
   padding-top: 6px;
   margin: 1px;
-  color: rgba(255, 255, 255, 0.5);
+  color: silver;
   text-align: center;
   font-size: 14px;
   border-radius: 3px;
@@ -72,7 +72,10 @@ const SLiFilter = styled(animated.li)`
     height: 100%;
     transition: all 0.3s ease-in-out;
     color: ${({ selected }) =>
-      selected ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.5)'};
+      selected ? 'white' : 'silver'};
+    :hover {
+      color: white;
+    }
   }
   background-image: ${({ selected }) =>
     selected

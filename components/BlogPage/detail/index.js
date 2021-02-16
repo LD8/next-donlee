@@ -43,7 +43,9 @@ const SPostDetail = styled.div`
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 5vh 10px;
+  padding: 2rem 1.5rem;
+  background-color: rgba(60, 65, 60, 1);
+  box-shadow: inset 0px -20px 20px rgba(170, 170, 170, 1);
   @media only screen and (max-width: 800px) {
     max-width: 95vw;
   }
