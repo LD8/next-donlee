@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import Badges from './Badges'
+import BadgesCardBack from './BadgesCardBack'
 
 export default function Showcase({ slug, title, imgSrcArr, badges }) {
   const [isClicked, setIsClicked] = useState(false)
@@ -32,7 +32,7 @@ export default function Showcase({ slug, title, imgSrcArr, badges }) {
         alt={`Project: ${title} for the back of the card`}
       />
       {isClicked && (
-        <Badges
+        <BadgesCardBack
           slug={slug}
           title={title}
           badges={badges}

@@ -1,11 +1,31 @@
 import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import { useTransition, animated } from 'react-spring'
 import styled from 'styled-components'
+import BadgeUl from './components/BadgeUl'
 import Showcase from './components/Showcase'
 
-export const ShowcaseList = ({ showcases }) => {
+export const ShowcaseList = ({ showcases = [], allBadges }) => {
   const ref = useRefToSetHeight()
+  const {
+    query: { badge = null },
+  } = useRouter()
+  const [finalShowcases, set] = useState(showcases)
 
+  useEffect(() => {
+    if (badge) {
+      return set(showcases.filter((s) => s.badges.includes(badge)))
+    }
+    set(showcases)
+  }, [badge])
+
+  const transitions = useTransition([finalShowcases], null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0, position: 'absolute' },
+  })
   return (
     <SShowcase id='SShowcase' ref={ref}>
       <Head>
@@ -22,24 +42,16 @@ export const ShowcaseList = ({ showcases }) => {
 
       <section className='badges'>
         <p>Click a label for related projects</p>
-        {/* <ul> */}
-        {/* TODO: badges */}
-        {/* {badges.map(({ name: label, id }, index) => (
-            <Link
-              key={index}
-              to={`${url}/showcases/badges/${id}/${slugifyText(label)}`}
-            >
-              <TechLabelSwitch label={label} id={id} />
-            </Link>
-          ))} */}
-        {/* </ul> */}
+        <BadgeUl badges={allBadges} asFilter />
       </section>
 
-      <section className='showcases'>
-        {showcases?.map((showcase) => (
-          <Showcase key={showcase.slug} {...showcase} />
-        ))}
-      </section>
+      {transitions.map(({ item: finalShowcases, props, key }) => (
+        <animated.section key={key} style={props} className='showcases'>
+          {finalShowcases?.map((showcase) => (
+            <Showcase key={showcase.slug} {...showcase} />
+          ))}
+        </animated.section>
+      ))}
     </SShowcase>
   )
 }
@@ -69,29 +81,6 @@ const SShowcase = styled.div`
     p {
       font-size: smaller;
       margin-bottom: 8px;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      a {
-        text-decoration: none;
-        li {
-          transition: color 0.4s ease;
-          will-change: color background-image;
-        }
-        :hover {
-          li {
-            color: white;
-            background-image: linear-gradient(
-              180deg,
-              rgba(50, 50, 50, 0.9),
-              rgba(60, 60, 60, 0.8)
-            );
-          }
-        }
-      }
     }
   }
   .showcases {

@@ -2,8 +2,9 @@ import Link from 'next/link'
 import { animated, useSpring } from 'react-spring'
 import styled from 'styled-components'
 import Badge from './Badge'
+import BadgeUl from './BadgeUl'
 
-export default function Badges({ slug, title, badges, isClicked }) {
+export default function BadgesCardBack({ slug, title, badges, isClicked }) {
   const labelProps = useSpring({
     opacity: isClicked ? 1 : 0,
     transform: `translateY(${isClicked ? 0 : -10}px)`,
@@ -15,16 +16,7 @@ export default function Badges({ slug, title, badges, isClicked }) {
   return (
     <STechLabels id='STechLabels'>
       <animated.h4 style={labelProps}>{title}</animated.h4>
-      <ul>
-        {badges?.map((badgeName, i) => (
-          <Badge
-            key={badgeName}
-            isClicked={isClicked}
-            badgeName={badgeName}
-            index={i}
-          />
-        ))}
-      </ul>
+      <BadgeUl badges={badges} isClicked={isClicked} passIndex />
       <Link href={`/portfolio/${slug}`}>
         <a>
           <Badge
