@@ -37,7 +37,6 @@ const SInput = styled.input`
   height: 30px;
   width: 40%;
   outline: none;
-  margin: 0 1rem;
   :focus {
     border-bottom: 1px solid silver;
   }

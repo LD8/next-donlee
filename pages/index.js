@@ -1,8 +1,6 @@
-import useRefToSetHeight from '@/lib/useRefToSetHeight'
+import { useRefToSetHeight } from '@/lib/hooks'
 
 export default function Home() {
   const ref = useRefToSetHeight()
   return <div ref={ref} />
 }
-
-// export const getStaticProps = async () => ({ props: {} })

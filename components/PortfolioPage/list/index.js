@@ -1,4 +1,4 @@
-import useRefToSetHeight from '@/lib/useRefToSetHeight'
+import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import styled from 'styled-components'
 import Showcase from './components/Showcase'

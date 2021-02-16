@@ -1,5 +1,5 @@
 import { useQuery } from '@/lib/hooks'
-import useRefToSetHeight from '@/lib/useRefToSetHeight'
+import { useRefToSetHeight } from '@/lib/hooks'
 import { contain } from '@/lib/utils'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -34,9 +34,9 @@ export const PostList = ({ postsData, allTags }) => {
   }, [search, tag])
 
   const transitions = useTransition([posts], null, {
-    from: { opacity: 0},
+    from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0, position: 'absolute'  },
+    leave: { opacity: 0, position: 'absolute' },
   })
 
   return (
@@ -63,7 +63,9 @@ export const PostList = ({ postsData, allTags }) => {
           </Link>
         </div>
         <div className='result'>
-          {(search || tag) && <span>Result: {posts.length}</span>}
+          <span>
+            {search || tag ? 'Search result: ' : 'Total posts: '} {posts?.length}
+          </span>
         </div>
       </section>
 
@@ -95,14 +97,13 @@ const SBlog = styled.div`
     margin-bottom: 1rem;
   }
   section.brief {
+    width: 90%;
+    margin: 0 auto 1rem auto;
     div.search {
-      width: 90%;
-      margin: 0 auto 2rem auto;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
       h3 {
         text-align: right;
+        padding-right: 0.5rem;
         width: 30%;
         font-size: small;
         line-height: 30px;
@@ -114,9 +115,15 @@ const SBlog = styled.div`
       }
     }
     div.result {
+      display: flex;
       span {
+        width: 40%;
         font-size: small;
         width: 30%;
+        margin: 0 auto;
+        padding-top: 0.5rem;
+        font-style: italic;
+        text-align: center;
       }
     }
   }
@@ -137,6 +144,7 @@ const SBtn = styled.button`
   background-color: transparent;
   border-radius: 0.25rem;
   color: silver;
-  padding: 0.25rem 0.75rem;
+  padding: 0.1rem 1rem;
+  margin-left: 1rem;
   outline: none;
 `
