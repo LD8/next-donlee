@@ -1,6 +1,6 @@
 import { animated, config, useTransition } from 'react-spring'
 import { Layout } from '../components'
-import '../styles/global.css'
+import '../styles/global.scss'
 
 export default function MyApp({ Component, pageProps, router }) {
   const { pathname } = router
