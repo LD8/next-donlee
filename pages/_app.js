@@ -2,9 +2,12 @@ import { animated, config, useTransition } from 'react-spring'
 import { Layout } from '../components'
 import '../styles/global.scss'
 
+const noTransitionPaths = ['/cv', '/cv-zh', '/something-else']
+
 export default function MyApp({ Component, pageProps, router }) {
   const { pathname } = router
-  const isCVPage = pathname === '/cv' || pathname === '/cv-zh'
+  // const isCVPage = pathname === '/cv' || pathname === '/cv-zh'
+  const noTransition = noTransitionPaths.includes(pathname)
 
   const transitions = useTransition([Component], (c) => c, {
     from: {
@@ -23,7 +26,7 @@ export default function MyApp({ Component, pageProps, router }) {
     config: config.gentle,
   })
 
-  return isCVPage ? (
+  return noTransition ? (
     <Component {...pageProps} />
   ) : (
     <Layout>
