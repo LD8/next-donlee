@@ -55,7 +55,7 @@ export const PostList = ({ postsData, allTags }) => {
           <Link
             href={{
               pathname: '/blog',
-              query: { page: 1, size, tag: null, search: null },
+              query: { page: 1, size: 5, tag: null, search: null },
             }}
           >
             <SBtn onClick={resetInputRef.current}>clear</SBtn>
@@ -63,7 +63,8 @@ export const PostList = ({ postsData, allTags }) => {
         </div>
         <div className='result'>
           <span>
-            {search || tag ? 'Search result: ' : 'Total posts: '} {posts?.length}
+            {search || tag ? 'Search result: ' : 'Total posts: '}{' '}
+            {posts?.length}
           </span>
         </div>
       </section>

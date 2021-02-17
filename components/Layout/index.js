@@ -30,7 +30,7 @@ export const Layout = ({ children }) => {
 
 const SContainer = styled.div`
   position: relative;
-  padding-top: ${({ isLanding }) => (isLanding ? '' : '7vh')};
+  padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,4 +40,8 @@ const SContainer = styled.div`
   background-image: url('/bg.jpg');
   background-size: ${({ isLanding }) => (isLanding ? 'cover' : '100%')};
   background-position: top;
+  @media only screen and (min-width: 1200px) {
+    padding-top: ${({ isLanding }) =>
+      isLanding ? '' : 'var(--nav-height-sm)'};
+  }
 `

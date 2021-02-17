@@ -1,10 +1,11 @@
-// import { useRefToSetHeight } from '@/lib/hooks'
+import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import styled from 'styled-components'
 import Tags from '../components/Tags'
+// import renderers from "./codeRenderers";
 
 export const renderers = {
   code: ({ language, value }) => {
@@ -13,19 +14,23 @@ export const renderers = {
         style={tomorrow}
         language={language}
         children={value}
+        customStyle={{ fontSize: '0.75rem' }}
       />
     )
   },
 }
 
 export const PostDetail = ({ slug, title, tags, date, content }) => {
-  // const ref = useRefToSetHeight()
+  const ref = useRefToSetHeight()
+  // TODO: double scroll optimization
+  // TODO: slow render optimization
   return (
     // <SPostDetail id='SPostDetail' ref={ref}>
     <SPostDetail id='SPostDetail'>
       <Head>
         <title>Blog - {title}</title>
       </Head>
+      <div ref={ref} />
       <h1 className='title'>{title}</h1>
       <Tags tags={tags} />
       <ReactMarkdown
@@ -39,13 +44,12 @@ export const PostDetail = ({ slug, title, tags, date, content }) => {
 }
 
 const SPostDetail = styled.div`
-  /* TODO: reading experience optimization */
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-  background-color: rgba(60, 65, 60, 1);
-  box-shadow: inset 0px -20px 20px rgba(170, 170, 170, 1);
+  padding: 2rem 1.3rem;
+  /* background-color: rgb(60, 65, 60);
+  box-shadow: inset 0px -20px 20px rgb(170, 170, 170); */
   @media only screen and (max-width: 800px) {
     max-width: 95vw;
   }
@@ -58,9 +62,9 @@ const SPostDetail = styled.div`
     border-bottom: 2px solid grey;
   }
   .content {
-    overflow: hidden;
-    margin: 1vh 0;
-    line-height: 2em;
+    overflow: scroll;
+    margin: 1rem 0;
+    line-height: 1.5rem;
     h1,
     h2,
     h3,
@@ -69,31 +73,39 @@ const SPostDetail = styled.div`
     h6 {
       color: white;
       font-weight: 600;
-      margin: 2vh 0;
+      margin: 1rem 0;
+      line-height: 2rem;
+      code {
+        font-size: 1rem;
+      }
     }
     img {
-      margin: 2vh 0;
+      margin: 1rem 0;
       border-radius: 8px;
       box-shadow: 0 0 8px black;
+      width: 100%;
     }
     blockquote {
       padding-left: 20px;
-      border-left: 5px solid rgba(170, 165, 190, 0.5);
+      border-left: 5px solid rgb(90, 90, 90);
       border-radius: 4px;
     }
     p {
       margin: 2vh 0;
     }
     pre {
-      border-radius: 10px;
-      border: 1.5px solid rgb(90, 90, 90);
-      box-shadow: inset -1.5px -3px 6px rgba(170, 165, 190, 0.5);
+      border-radius: 0.25rem;
+      border: 1px solid rgb(90, 90, 90);
+      box-shadow: inset -1.5px -3px 6px rgb(130, 135, 130);
       margin-bottom: 20px !important;
     }
     code {
       font-family: Courier, monospace;
-      color: yellow;
-      font-size: 16px;
+      color: var(--code-text-color);
+      background-color: var(--code-bg-color);
+      padding: 0 0.5rem 0.1rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: small;
     }
     a {
       color: orangered;

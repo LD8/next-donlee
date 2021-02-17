@@ -45,7 +45,8 @@ code {
   --bg-shadow-color: rgba(0, 0, 0, 0.8);
   --page-bg-color: rgba(255, 255, 255, 0.9);
   --link-text-color: white;
-
+  --code-text-color: rgb(234, 238, 163);
+  --code-bg-color: rgb(34, 37, 34);
 
   --title: rgb(226, 231, 221);
   --whitegreen: rgb(193, 211, 193);
@@ -56,4 +57,10 @@ code {
   background-color: rgb(36, 39, 33);
   /* background-color: rgb(150, 150, 150); */
   scroll-behavior: smooth;
+
+  // nav height
+  // for small screen: smaller screen the wider nav height
+  --nav-height-lg: calc(2vmin + 50px);
+  // for big screen: bigger screen the narrower nav height
+  --nav-height-sm: calc(2vmin + 40px);
 }

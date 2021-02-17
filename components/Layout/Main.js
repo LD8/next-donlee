@@ -23,7 +23,9 @@ const SMain = styled.div`
   opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
   min-height: ${({ isPostPage }) =>
-    isPostPage ? 'calc(93vh - 80px)' : 'calc(93vh - 160px)'};
+    isPostPage
+      ? 'calc(100vh - var(--nav-height-lg) - 80px)'
+      : 'calc(100vh - var(--nav-height-lg) - 160px)'};
   /* height: 1000px; */
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 0 20px var(--bg-shadow-color);
@@ -33,4 +35,11 @@ const SMain = styled.div`
     rgba(40, 43, 41, 0.8),
     rgba(40, 43, 41, 0.9)
   );
+  @media only screen and (min-width: 1200px) {
+    height: 5vh;
+    min-height: ${({ isPostPage }) =>
+      isPostPage
+        ? 'calc(100vh - var(--nav-height-sm) - 80px)'
+        : 'calc(100vh - var(--nav-height-sm) - 160px)'};
+  }
 `
