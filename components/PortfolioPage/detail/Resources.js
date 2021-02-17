@@ -8,19 +8,37 @@ export default function Resources({ links }) {
         {links.online && (
           <li>
             <SSpan>Visit the website:</SSpan>
-            <SLink href={links.online}>{links.online}</SLink>
+            <SAnchor
+              target='_blank'
+              rel='noopener noreferrer'
+              href={links.online}
+            >
+              {links.online}
+            </SAnchor>
           </li>
         )}
         {links.github && (
           <li>
             <SSpan>GitHub source files:</SSpan>
-            <SLink href={links.github}>{links.github}</SLink>
+            <SAnchor
+              target='_blank'
+              rel='noopener noreferrer'
+              href={links.github}
+            >
+              {links.github}
+            </SAnchor>
           </li>
         )}
         {links.codeSandbox && (
           <li>
             <SSpan>Code-Sandbox:</SSpan>
-            <SLink href={links.codeSandbox}>Portal Here</SLink>
+            <SAnchor
+              target='_blank'
+              rel='noopener noreferrer'
+              href={links.codeSandbox}
+            >
+              Portal Here
+            </SAnchor>
           </li>
         )}
       </ul>
@@ -32,7 +50,7 @@ const SSpan = styled.span`
   width: 200px;
   padding-right: 20px;
 `
-const SLink = styled.a`
+const SAnchor = styled.a`
   text-transform: uppercase;
-  font-size: smaller
+  font-size: smaller;
 `
