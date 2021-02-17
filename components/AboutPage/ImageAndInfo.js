@@ -10,8 +10,8 @@ export default function ImageAndInfo() {
         <h2>Peiwen Li</h2>
         <h4>Full-stack Developer</h4>
         <p>
-          Passionate in developing software that brings happiness and light into
-          our lives
+          Passionate in developing software that brings joy and peace to our
+          lives
         </p>
       </div>
     </SImageAndInfoSection>

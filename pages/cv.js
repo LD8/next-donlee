@@ -23,8 +23,8 @@ export default function CV() {
             <h1>Peiwen Li</h1>
             <h2>Full-stack Software Developer</h2>
             <p>
-              Passionate in developing software that brings happiness and light
-              into our lives
+              Passionate in developing software that brings joy and peace to our
+              lives
             </p>
           </div>
           <div className='contact-info'>
@@ -44,10 +44,9 @@ export default function CV() {
           <div className='details'>
             <ul>
               <li>
-                Front-end: JavaScript ES6, React (with Hooks), Webpack, HTML5,
-                CSS3
+                Front-end: JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS, VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS, Bootstrap, Material UI, Chakra UI, Ant Desgin
               </li>
-              <li>Back-end: Python, Django, Flask, Postgres</li>
+              <li>Back-end: NodeJS, Python, Django, Flask, Postgres</li>
               <li>Data Visualisation: Python, Plotly, Matplotlib</li>
               <li>
                 UI/UX: having a master degree in Art and Science, I am confident
@@ -76,6 +75,9 @@ export default function CV() {
               <li>
                 Web Dev: Efficiently develop web apps with React, TypeScript
                 alongside libraries and frameworks such as antd and umi etc.
+              </li>
+              <li>
+                Maintenance: Maintain existing projects, mainly using Vue and TypeScript with antd
               </li>
               <li>
                 UI&UX Design: Design easy-to-use web UI, unify design language,
@@ -208,8 +210,8 @@ export default function CV() {
               <li>on site construction management</li>
             </ul>
             <p>
-              In these two years, I participated in 1 large project over 2000
-              sqm, 2 medium projects over 1000 sqm and 4 smaller projects just
+              In these two years, I participated in one large project over 2000
+              sqm, two medium projects over 1000 sqm and four smaller projects just
               under 500 sqm, all of which were successfully delivered on
               schedule. During this time, I tasted the fruit of seamless team
               work, gained understanding of project management, realising that

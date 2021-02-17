@@ -22,7 +22,9 @@ export default function CVZH() {
           <div className='general-info'>
             <h1>李沛文</h1>
             <h2>全栈开发</h2>
-            <p>对开发可以给人们带来快乐和给生活带来光彩的软件报以热忱</p>
+            <p>
+              对开发优质软件和服务报以热忱，将用户体验作为核心，对细节一丝不苟
+            </p>
           </div>
           <div className='contact-info'>
             <ExLink href='http://donlee.online'>www.donlee.online</ExLink>
@@ -41,10 +43,9 @@ export default function CVZH() {
           <div className='details'>
             <ul>
               <li>
-                前端：JavaScript ES6, React (with Hooks), TypeScript, Webpack,
-                HTML5, CSS3, LESS
+                前端：JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS, VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS, Bootstrap, Material UI, Chakra UI, Ant Desgin
               </li>
-              <li>后端：Python, Django, Flask, Postgres</li>
+              <li>后端：NodeJS, Python, Django, Flask, Postgres</li>
               <li>数据可视化：Python, Plotly, Matplotlib</li>
               <li>
                 UI/UX：经过在英国的硕士学习，对艺术与科学交叉项目有了清晰的认识和具有一定深度的理解，对设计和编写高质量的、高交互性、跨学科的项目很有信心
@@ -69,21 +70,23 @@ export default function CVZH() {
             <h4>前端开发和数字交互设计</h4>
             <ul>
               <li>
-                网页开发：高效完成开发，熟练运用React和TypeScript，配合antd、umi等前端库和框架
+                开发工作：高效完成开发，熟练运用 React 和 TypeScript，配合 antd、umi 等前端库和框架
               </li>
               <li>
-                UI和UX设计：用户界面及优化用户体验，统一设计语言，经过细致地调研后，使用Adobe
-                XD绘制别致的交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范、添加代码备注等
+                维护工作：维护现有项目，主要使用 Vue 和 TypeScript，配合 antd
               </li>
               <li>
-                融合实施：带领前端团队高效地实现设计，每周细致地UI走查、测试、评审、反馈等，对细节要求非常严格
+                UI/UX设计：用户界面及优化用户体验，统一设计语言，根据产品需求进行细致调研，优化需求方案，使用 Adobe XD 绘制交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范等
               </li>
               <li>
-                沟通工作：成为需求、产品经理、前端领导和后端领导间沟通的桥梁，从而使产品更有活力
+                实施管理：带领前端团队高效实现设计还原，UI走查、测试、评审、反馈等
+              </li>
+              <li>
+                沟通工作：成为产品经理、前端和后端团队间沟通的桥梁，从而使产品更有活力
               </li>
             </ul>
             <p>
-              入职之初便挑起UI和UX设计的重担，同时兼顾网页开发工作，大力推进UI在开发过程中的实施，与前端团队密切和细致地沟通，使之建立起对网页设计的信心，灌输新的设计理念，两个月内一个具有复杂界面的网页交易系统基本成型，成为公司自研主打产品之一
+              有幸能加入链石团队，入职之初便挑起UI/UX设计的重担，兼顾网页开发工作，大力推进UI在开发过程中的实施，与前端团队密切和细致地沟通，使之建立起对网页设计的信心，灌输新的设计理念，两个月内一个具有复杂界面的网页交易系统基本成型，成为公司自研主打产品之一
             </p>
           </div>
         </div>
@@ -101,8 +104,7 @@ export default function CVZH() {
                 根据客户的商业模式和规模设计网站交互界面，搭建后端API和数据库，独立编写代码
               </li>
               <li>
-                主要应用JavaScript (React.js)和Python，Django
-                Web框架，PostgreSQL
+                主要应用JavaScript (React)和Python，Django Web框架，PostgreSQL
               </li>
               <li>
                 作品展示：
