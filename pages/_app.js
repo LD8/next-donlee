@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps, router }) {
   // const isCVPage = pathname === '/cv' || pathname === '/cv-zh'
   const noTransition = noTransitionPaths.includes(pathname)
 
-  const transitions = useTransition([Component], (c) => c, {
+  const transitions = useTransition([Component], null, {
     from: {
       opacity: 0,
       transform: 'translate3d(100%,0,0)',

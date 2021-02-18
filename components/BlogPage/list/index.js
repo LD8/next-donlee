@@ -89,7 +89,7 @@ export const PostList = ({ postsData, allTags }) => {
 const SBlog = styled.div`
   width: 100%;
   max-width: 600px;
-  padding: 4vh 0;
+  padding: 1rem 0;
   @media only screen and (max-width: 800px) {
     max-width: 94vw;
   }

@@ -27,16 +27,15 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
     leave: { opacity: 0, position: 'absolute' },
   })
   return (
-    <SShowcase id='SShowcase' ref={ref}>
+    <SShowcaseList id='SShowcaseList' ref={ref}>
       <Head>
         <title>Peiwen Li's Portfolio</title>
       </Head>
 
       <section className='brief'>
         <h3>
-          From React.JS and UI/UX animations to Python and Django backend
-          support. Check out my latest web software development portfolio
-          projects.
+          Portfolio projects: From JS frameworks and UX optimization to Python
+          backend support
         </h3>
       </section>
 
@@ -52,14 +51,14 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
           ))}
         </animated.section>
       ))}
-    </SShowcase>
+    </SShowcaseList>
   )
 }
 
-const SShowcase = styled.div`
+const SShowcaseList = styled.div`
   max-width: 1000px;
   .brief {
-    padding: 3vh 0 5vh 0;
+    padding: 1rem 0 2rem 0;
     h3 {
       line-height: 30px;
       font-weight: 400;

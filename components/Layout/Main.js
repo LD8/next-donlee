@@ -6,7 +6,6 @@ export const mainDivHeightContext = createContext()
 export default function Main({ children, show, isPostPage }) {
   const [height, setHeight] = useState(0)
   const { Provider } = mainDivHeightContext
-
   return (
     <SMain id='SMain' show={show} style={{ height }} isPostPage={isPostPage}>
       <Provider value={setHeight}>{children}</Provider>
