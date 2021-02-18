@@ -11,7 +11,7 @@ export default function Nav() {
       <ul>
         {NAV_LINKS.map(({ name, path }) => (
           <li key={path}>
-            <Link href={pathname !== path ? path : '/'}>
+            <Link passHref href={pathname !== path ? path : '/'}>
               <SAnchor
                 // isActive={
                 //   pathname === path.slice(0, pathname.length) ||
