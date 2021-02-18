@@ -2,9 +2,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import styled from 'styled-components'
+import { memo } from 'react'
 import { NAV_LINKS } from '../consts'
 
-export default function Nav() {
+export default memo(function Nav() {
   const { pathname } = useRouter()
   return (
     <SNav toTop={pathname !== '/'}>
@@ -28,7 +29,7 @@ export default function Nav() {
       </ul>
     </SNav>
   )
-}
+})
 
 const SNav = styled.nav`
   position: absolute;

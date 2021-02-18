@@ -1,9 +1,9 @@
 import { FOOTER_ICONS } from '../consts'
 import styled from 'styled-components'
 import Icon from './Icon'
-import { useRouter } from 'next/router'
+import { memo } from 'react'
 
-export default function Footer({ show, isPostPage }) {
+export default memo(function Footer({ show, isPostPage }) {
   return (
     <SFooter id='SFooter' show={show} isPostPage={isPostPage}>
       {FOOTER_ICONS.map((i) => (
@@ -11,7 +11,7 @@ export default function Footer({ show, isPostPage }) {
       ))}
     </SFooter>
   )
-}
+})
 
 const SFooter = styled.footer`
   opacity: ${({ show }) => (show ? '1' : '0')};

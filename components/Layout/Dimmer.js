@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import { memo } from 'react'
 
-export default function Dimmer({ lighten }) {
+export default memo(function Dimmer({ lighten }) {
   return <SBGDimmer id='SBGDimmer' lighten={lighten} />
-}
+})
 
 const SBGDimmer = styled.div`
   position: fixed;
