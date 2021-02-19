@@ -35,6 +35,7 @@ export const PostList = ({ postsData, allTags }) => {
   const transitions = useTransition([posts], null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
+    update: { opacity: 1},
     leave: { opacity: 0, position: 'absolute' },
   })
 
@@ -61,6 +62,7 @@ export const PostList = ({ postsData, allTags }) => {
             <SBtn onClick={resetInputRef.current}>clear</SBtn>
           </Link>
         </div>
+
         <div className='result'>
           <span>
             {search || tag ? 'Search result: ' : 'Total posts: '}{' '}

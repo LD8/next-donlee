@@ -18,12 +18,16 @@ export default function MyApp({ Component, pageProps, router }) {
       opacity: 1,
       transform: 'translate3d(0%,0,0)',
     },
+    // update: {
+    //   opacity: 1,
+    //   transform: 'translate3d(0%,0,0)',
+    // },
     leave: {
       opacity: 0,
       position: 'absolute',
       transform: 'translate3d(-100%,0,0)',
     },
-    config: config.gentle,
+    // config: config.gentle,
   })
 
   return noTransition ? (
