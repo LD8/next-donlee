@@ -20,10 +20,11 @@ export const Layout = ({ children }) => {
       <Dimmer lighten={isLanding} />
       <Nav />
       <Quote show={isLanding} />
-      <Main show={!isLanding} isPostPage={isPostPage}>
+      {/* <Main show={!isLanding} isPostPage={isPostPage}>
         {children}
       </Main>
-      <Footer show={!isLanding} isPostPage={isPostPage} />
+      <Footer show={!isLanding} isPostPage={isPostPage} /> */}
+      {children}
     </SContainer>
   )
 }

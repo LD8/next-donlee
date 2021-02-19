@@ -16,7 +16,8 @@ export default function Main({ children, show, isPostPage }) {
 
 const SMain = styled.div`
   position: relative;
-  overflow: ${({ isPostPage }) => (isPostPage ? 'scroll' : 'hidden')};
+  /* overflow: ${({ isPostPage }) => (isPostPage ? 'scroll' : 'hidden')}; */
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
