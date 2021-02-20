@@ -28,7 +28,8 @@ export const Layout = ({ children }) => {
 const SContainer = styled.div`
   position: relative;
   overflow: hidden;
-  padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')};
+  /* padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')}; */
+  padding-top: var(--nav-height);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@ const SContainer = styled.div`
   background-size: ${({ isLanding }) => (isLanding ? 'cover' : '100%')};
   background-position: top;
   @media only screen and (min-width: 1200px) {
-    padding-top: ${({ isLanding }) =>
-      isLanding ? '' : 'var(--nav-height-sm)'};
+    /* padding-top: ${({ isLanding }) =>
+      isLanding ? '' : 'var(--nav-height-sm)'}; */
   }
 `

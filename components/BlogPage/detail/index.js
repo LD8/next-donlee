@@ -1,4 +1,3 @@
-import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -21,16 +20,13 @@ export const renderers = {
 }
 
 export const PostDetail = ({ slug, title, tags, date, content }) => {
-  const ref = useRefToSetHeight()
   // TODO: double scroll optimization
   // TODO: slow render optimization
   return (
-    // <SPostDetail id='SPostDetail' ref={ref}>
     <SPostDetail id='SPostDetail'>
       <Head>
         <title>Blog - {title}</title>
       </Head>
-      <div ref={ref} />
       <h1 className='title'>{title}</h1>
       <Tags tags={tags} />
       <ReactMarkdown

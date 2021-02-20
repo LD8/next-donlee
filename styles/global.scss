@@ -60,7 +60,9 @@ code {
 
   // nav height
   // for small screen: smaller screen the wider nav height
-  --nav-height-lg: calc(2vmin + 50px);
+  // --nav-height-lg: calc(2vmin + 50px);
   // for big screen: bigger screen the narrower nav height
-  --nav-height-sm: calc(2vmin + 40px);
+  // --nav-height-sm: calc(2vmin + 40px);
+  --nav-height: 60px;
+  --footer-height: 60px;
 }

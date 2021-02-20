@@ -37,18 +37,24 @@ const SIcon = styled.div`
   justify-content: center;
   align-items: center;
   > a {
-    margin: 0 calc(1vw + 20px);
+    margin: 0 calc(2vw + 20px);
     img {
       height: 30px;
-      @media only screen and (max-width: 800px) {
-        height: 30px;
-      }
     }
   }
   > p {
-    display: none;
-    margin-top: 10px;
-    font-size: smaller;
-    cursor: default;
+    visibility: hidden;
+    margin-top: -15px;
+  }
+  @media only screen and (max-width: 800px) {
+    > a > img {
+      height: 20px;
+    }
+    > p {
+      visibility: visible;
+      margin-top: 5px;
+      font-size: smaller;
+      cursor: default;
+    }
   }
 `

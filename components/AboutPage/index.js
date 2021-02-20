@@ -18,5 +18,5 @@ export const AboutPage = () => {
 const SMyInfo = styled.div`
   width: 100%;
   max-width: 800px;
-  min-height: 800px;
+  min-height: 700px;
 `

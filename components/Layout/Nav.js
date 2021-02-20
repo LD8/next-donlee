@@ -8,17 +8,17 @@ import { NAV_LINKS } from '../consts'
 export default memo(function Nav() {
   const { pathname } = useRouter()
   return (
-    <SNav toTop={pathname !== '/'}>
+    <SNav isLanding={pathname === '/'}>
       <ul>
         {NAV_LINKS.map(({ name, path }) => (
           <li key={path}>
             <Link passHref href={pathname !== path ? path : '/'}>
               <SAnchor
-                // isActive={
-                //   pathname === path.slice(0, pathname.length) ||
-                //   pathname === '/'
-                // }
-                isActive={pathname === path || pathname === '/'}
+                isActive={
+                  pathname === path ||
+                  pathname === '/' ||
+                  pathname === `${path}/[slug]`
+                }
                 isHome={pathname === '/'}
               >
                 {name}
@@ -35,12 +35,13 @@ const SNav = styled.nav`
   position: absolute;
   width: 100%;
   max-width: 1000px;
-  height: var(--nav-height-lg);
-  top: ${({ toTop }) => (toTop ? '0' : '40vh')};
+  height: var(--nav-height);
+  /* height: var(--nav-height-lg); */
+  top: ${({ isLanding }) => (isLanding ? '40vh' : '0')};
   z-index: 10;
   transition: all 0.5s ease;
   @media only screen and (min-width: 1200px) {
-    height: var(--nav-height-sm);
+    /* height: var(--nav-height-sm); */
   }
   ul {
     width: 80%;

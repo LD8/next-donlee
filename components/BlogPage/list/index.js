@@ -1,4 +1,4 @@
-import { useQuery, useRefToSetHeight } from '@/lib/hooks'
+import { useQuery } from '@/lib/hooks'
 import { contain } from '@/lib/utils'
 import Head from 'next/head'
 import Link from 'next/link'
