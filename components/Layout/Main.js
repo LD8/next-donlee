@@ -3,30 +3,24 @@ import styled from 'styled-components'
 
 export const mainDivHeightContext = createContext()
 
-export default function Main({ children, show, isPostPage }) {
-  const [height, setHeight] = useState(0)
-  const { Provider } = mainDivHeightContext
-
+export default function Main({ children, show }) {
   return (
-    <SMain id='SMain' show={show} style={{ height }} isPostPage={isPostPage}>
-      <Provider value={setHeight}>{children}</Provider>
+    <SMain id='SMain' show={show}>
+      {children}
     </SMain>
   )
 }
 
 const SMain = styled.div`
   position: relative;
-  overflow: ${({ isPostPage }) => (isPostPage ? 'scroll' : 'hidden')};
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: ${({ show }) => (show ? 1 : 0)};
   width: 100%;
-  min-height: ${({ isPostPage }) =>
-    isPostPage
-      ? 'calc(100vh - var(--nav-height-lg) - 80px)'
-      : 'calc(100vh - var(--nav-height-lg) - 160px)'};
-  /* height: 1000px; */
+  /* min-height: calc(100vh - var(--nav-height-lg) - 80px); */
+  min-height: calc(100vh - var(--nav-height) - var(--footer-height));
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 0 20px var(--bg-shadow-color);
   color: silver;
@@ -36,10 +30,14 @@ const SMain = styled.div`
     rgba(40, 43, 41, 0.9)
   );
   @media only screen and (min-width: 1200px) {
-    height: 5vh;
-    min-height: ${({ isPostPage }) =>
-      isPostPage
-        ? 'calc(100vh - var(--nav-height-sm) - 80px)'
-        : 'calc(100vh - var(--nav-height-sm) - 160px)'};
+    /* min-height: calc(100vh - var(--nav-height-sm) - 80px); */
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+  }
+
+  > div {
+    min-height: calc(100vh - var(--nav-height));
+    @media only screen and (max-width: 1200px) {
+      min-height: 700px;
+    }
   }
 `

@@ -2,12 +2,10 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import ImageAndInfo from './ImageAndInfo'
 import Skills from './Skills'
-import { useRefToSetHeight } from '@/lib/hooks'
 
 export const AboutPage = () => {
-  const ref = useRefToSetHeight()
   return (
-    <SMyInfo id='SMyInfo' ref={ref}>
+    <SMyInfo id='SMyInfo'>
       <Head>
         <title>About Peiwen Li</title>
       </Head>
@@ -20,5 +18,8 @@ export const AboutPage = () => {
 const SMyInfo = styled.div`
   width: 100%;
   max-width: 800px;
-  min-height: 800px;
+  margin: 4rem 0;
+  @media only screen and (max-width: 1200px) {
+    margin: 3rem 0;
+  }
 `

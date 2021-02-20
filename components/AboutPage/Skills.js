@@ -16,7 +16,7 @@ export default function Skills() {
 
 const SSkillSection = styled.section`
   width: 90%;
-  margin: 0 auto;
+  margin: 4rem auto;
   ul {
     width: 100%;
     max-width: 680px;

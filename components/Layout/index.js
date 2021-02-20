@@ -10,7 +10,6 @@ import Quote from './Quote'
 export const Layout = ({ children }) => {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
-  const isPostPage = pathname === '/blog/[slug]'
 
   return (
     <SContainer id='SContainer' isLanding={isLanding}>
@@ -20,17 +19,17 @@ export const Layout = ({ children }) => {
       <Dimmer lighten={isLanding} />
       <Nav />
       <Quote show={isLanding} />
-      <Main show={!isLanding} isPostPage={isPostPage}>
-        {children}
-      </Main>
-      <Footer show={!isLanding} isPostPage={isPostPage} />
+      <Main show={!isLanding}>{children}</Main>
+      <Footer show={!isLanding} />
     </SContainer>
   )
 }
 
 const SContainer = styled.div`
   position: relative;
-  padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')};
+  overflow: hidden;
+  /* padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')}; */
+  padding-top: var(--nav-height);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@ const SContainer = styled.div`
   background-size: ${({ isLanding }) => (isLanding ? 'cover' : '100%')};
   background-position: top;
   @media only screen and (min-width: 1200px) {
-    padding-top: ${({ isLanding }) =>
-      isLanding ? '' : 'var(--nav-height-sm)'};
+    /* padding-top: ${({ isLanding }) =>
+      isLanding ? '' : 'var(--nav-height-sm)'}; */
   }
 `

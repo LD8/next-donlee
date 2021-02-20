@@ -1,4 +1,3 @@
-import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -8,7 +7,6 @@ import BadgeUl from './components/BadgeUl'
 import Showcase from './components/Showcase'
 
 export const ShowcaseList = ({ showcases = [], allBadges }) => {
-  const ref = useRefToSetHeight()
   const {
     query: { badge = null },
   } = useRouter()
@@ -23,12 +21,13 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
 
   const transitions = useTransition([finalShowcases], null, {
     from: { opacity: 0 },
-    // enter: { opacity: 1 },
     update: { opacity: 1 },
+    enter: { opacity: 1 },
     leave: { opacity: 0, position: 'absolute' },
+    config: { duration: 200 },
   })
   return (
-    <SShowcaseList id='SShowcaseList' ref={ref}>
+    <SShowcaseList id='SShowcaseList'>
       <Head>
         <title>Peiwen Li's Portfolio</title>
       </Head>

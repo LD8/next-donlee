@@ -1,4 +1,4 @@
-import { useQuery, useRefToSetHeight } from '@/lib/hooks'
+import { useQuery } from '@/lib/hooks'
 import { contain } from '@/lib/utils'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -11,7 +11,6 @@ import PostListItem from './PostListItem'
 import Search from './Search'
 
 export const PostList = ({ postsData, allTags }) => {
-  const ref = useRefToSetHeight()
   const { page, size, tag, search } = useQuery()
   const [posts, setPosts] = useState(postsData)
   const resetInputRef = useRef()
@@ -40,7 +39,7 @@ export const PostList = ({ postsData, allTags }) => {
   })
 
   return (
-    <SBlog id='SBlog' ref={ref}>
+    <SBlog id='SBlog'>
       <Head>
         <title>Peiwen Li's Blog</title>
       </Head>

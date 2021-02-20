@@ -20,7 +20,7 @@ export default function ImageAndInfo() {
 
 const SImageAndInfoSection = styled.section`
   width: 100%;
-  margin: 4rem auto 3rem auto;
+  margin: 3rem auto 3rem auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

@@ -1,4 +1,3 @@
-import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import styled from 'styled-components'
 import Carousel from './Carousel'
@@ -17,9 +16,8 @@ export const ShowcaseDetail = ({
   endedAt,
   badges,
 }) => {
-  const ref = useRefToSetHeight()
   return (
-    <SCaseDetail id='SCaseDetail' ref={ref}>
+    <SCaseDetail id='SCaseDetail'>
       <Head>
         <title>{title}</title>
       </Head>
