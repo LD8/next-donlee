@@ -22,6 +22,7 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
   const transitions = useTransition([finalShowcases], null, {
     from: { opacity: 0 },
     update: { opacity: 1 },
+    enter: { opacity: 1 },
     leave: { opacity: 0 },
     config: { duration: 200 },
   })
