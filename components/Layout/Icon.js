@@ -13,7 +13,7 @@ export default function Icon({ name, imageSource, altText, href }) {
   })
 
   return (
-    <SIcon id={`SIcon_${name}`}>
+    <div>
       <ExternalLink href={href}>
         <animated.img
           src={imageSource}
@@ -22,39 +22,8 @@ export default function Icon({ name, imageSource, altText, href }) {
           onMouseLeave={() => set(false)}
           style={hoveredProps}
         />
+        <p>{name}</p>
       </ExternalLink>
-      <p>{name}</p>
-    </SIcon>
+    </div>
   )
 }
-
-const SIcon = styled.div`
-  height: 100%;
-  max-width: 33%;
-  color: silver;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  > a {
-    margin: 0 calc(2vw + 20px);
-    img {
-      height: 30px;
-    }
-  }
-  > p {
-    visibility: hidden;
-    margin-top: -15px;
-  }
-  @media only screen and (max-width: 800px) {
-    > a > img {
-      height: 20px;
-    }
-    > p {
-      visibility: visible;
-      margin-top: 5px;
-      font-size: smaller;
-      cursor: default;
-    }
-  }
-`

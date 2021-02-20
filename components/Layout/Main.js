@@ -33,4 +33,11 @@ const SMain = styled.div`
     /* min-height: calc(100vh - var(--nav-height-sm) - 80px); */
     min-height: calc(100vh - var(--nav-height) - var(--footer-height));
   }
+
+  > div {
+    min-height: calc(100vh - var(--nav-height));
+    @media only screen and (max-width: 1200px) {
+      min-height: 700px;
+    }
+  }
 `
