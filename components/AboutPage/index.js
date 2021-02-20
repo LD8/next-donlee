@@ -2,12 +2,10 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import ImageAndInfo from './ImageAndInfo'
 import Skills from './Skills'
-import { useRefToSetHeight } from '@/lib/hooks'
 
 export const AboutPage = () => {
-  const ref = useRefToSetHeight()
   return (
-    <SMyInfo id='SMyInfo' ref={ref}>
+    <SMyInfo id='SMyInfo'>
       <Head>
         <title>About Peiwen Li</title>
       </Head>

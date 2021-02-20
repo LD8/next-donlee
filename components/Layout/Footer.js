@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Icon from './Icon'
 import { memo } from 'react'
 
-export default memo(function Footer({ show, isPostPage }) {
+export default memo(function Footer({ show }) {
   return (
-    <SFooter id='SFooter' show={show} isPostPage={isPostPage}>
+    <SFooter id='SFooter' show={show}>
       {FOOTER_ICONS.map((i) => (
-        <Icon key={i.name} {...i} isPostPage={isPostPage} />
+        <Icon key={i.name} {...i} />
       ))}
     </SFooter>
   )
@@ -18,7 +18,7 @@ const SFooter = styled.footer`
   position: sticky;
   top: 100%;
   width: 100%;
-  height: ${({ isPostPage }) => (isPostPage ? '80px' : '160px')};
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,3 @@
-import { useRefToSetHeight } from '@/lib/hooks'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -22,9 +21,9 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
 
   const transitions = useTransition([finalShowcases], null, {
     from: { opacity: 0 },
-    enter: { opacity: 1 },
-    // update: { opacity: 1 },
-    leave: { opacity: 0, position: 'absolute' },
+    update: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 200 },
   })
   return (
     <SShowcaseList id='SShowcaseList'>

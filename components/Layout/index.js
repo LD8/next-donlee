@@ -10,7 +10,6 @@ import Quote from './Quote'
 export const Layout = ({ children }) => {
   const { pathname } = useRouter()
   const isLanding = pathname === '/'
-  const isPostPage = pathname === '/blog/[slug]'
 
   return (
     <SContainer id='SContainer' isLanding={isLanding}>
@@ -20,17 +19,15 @@ export const Layout = ({ children }) => {
       <Dimmer lighten={isLanding} />
       <Nav />
       <Quote show={isLanding} />
-      {/* <Main show={!isLanding} isPostPage={isPostPage}>
-        {children}
-      </Main>
-      <Footer show={!isLanding} isPostPage={isPostPage} /> */}
-      {children}
+      <Main show={!isLanding}>{children}</Main>
+      <Footer show={!isLanding} />
     </SContainer>
   )
 }
 
 const SContainer = styled.div`
   position: relative;
+  overflow: hidden;
   padding-top: ${({ isLanding }) => (isLanding ? '' : 'var(--nav-height-lg)')};
   min-height: 100vh;
   display: flex;
