@@ -18,4 +18,8 @@ export const AboutPage = () => {
 const SMyInfo = styled.div`
   width: 100%;
   max-width: 800px;
+  margin: 4rem 0;
+  @media only screen and (max-width: 1200px) {
+    margin: 3rem 0;
+  }
 `

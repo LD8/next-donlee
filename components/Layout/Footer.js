@@ -19,7 +19,7 @@ const SFooter = styled.footer`
   transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(50px)')};
   position: fixed;
   right: calc((100vw - 1200px) / 2);
-  bottom: 10vh;
+  bottom: 25vh;
 
   > div {
     margin: 30px 0;
