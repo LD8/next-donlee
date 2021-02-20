@@ -23,7 +23,7 @@ export const ShowcaseList = ({ showcases = [], allBadges }) => {
     from: { opacity: 0 },
     update: { opacity: 1 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    leave: { opacity: 0, position: 'absolute' },
     config: { duration: 200 },
   })
   return (
