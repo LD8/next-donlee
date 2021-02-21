@@ -62,7 +62,6 @@ const SFooter = styled.footer`
     position: sticky;
     top: 100%;
     width: 100%;
-    margin: default;
     height: var(--footer-height);
     display: flex;
     justify-content: center;

@@ -1,7 +1,4 @@
-import { createContext, useState } from 'react'
 import styled from 'styled-components'
-
-export const mainDivHeightContext = createContext()
 
 export default function Main({ children, show }) {
   return (
@@ -13,7 +10,7 @@ export default function Main({ children, show }) {
 
 const SMain = styled.div`
   position: relative;
-  overflow: scroll;
+  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,13 +28,6 @@ const SMain = styled.div`
   );
   @media only screen and (min-width: 1200px) {
     /* min-height: calc(100vh - var(--nav-height-sm) - 80px); */
-    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
-  }
-
-  > div {
     min-height: calc(100vh - var(--nav-height));
-    @media only screen and (max-width: 1200px) {
-      min-height: 700px;
-    }
   }
 `

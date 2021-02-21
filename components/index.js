@@ -1,5 +1,4 @@
 export { Layout } from './Layout'
-export { mainDivHeightContext } from './Layout/Main'
 export { PageNotFound } from './PageNotFound'
 export { AboutPage } from './AboutPage'
 export { ExternalLink } from './ExternalLink'
