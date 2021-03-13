@@ -23,13 +23,13 @@ export default function CVZH() {
             <h1>李沛文</h1>
             <h2>全栈开发</h2>
             <p>
-              对开发优质软件和服务报以热忱，将用户体验作为核心，对细节一丝不苟
+              将用户体验作为核心，对细节一丝不苟，开发为世界带来喜悦与平和的软件
             </p>
           </div>
           <div className='contact-info'>
-            <ExLink href='http://donlee.online'>www.donlee.online</ExLink>
+            <ExLink href='http://donlee.online'>donlee.online</ExLink>
             <ExLink href='mailto: don_lee@me.com'>don_lee@me.com</ExLink>
-            <ExLink href='https://github.com/LD8'>github.com/LD8</ExLink>
+            <ExLink href='https://github.com/ld8'>github.com/ld8</ExLink>
           </div>
         </div>
       </section>
@@ -43,7 +43,9 @@ export default function CVZH() {
           <div className='details'>
             <ul>
               <li>
-                前端：JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS, VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS, Bootstrap, Material UI, Chakra UI, Ant Desgin
+                前端：JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS,
+                VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS,
+                Bootstrap, Material UI, Chakra UI, Ant Desgin
               </li>
               <li>后端：NodeJS, Python, Django, Flask, Postgres</li>
               <li>数据可视化：Python, Plotly, Matplotlib</li>
@@ -62,21 +64,24 @@ export default function CVZH() {
 
         <div className='sub-container'>
           <div className='aside'>
-            <p className='company-name'>链石科技，上海</p>
-            <p className='year'>May 2020 - Now</p>
-            <ExLink href='http://www.chaintor.com/'>chaintor.com</ExLink>
+            <p className='company-name'>筹远科技，上海</p>
+            <p className='year'>May 2020 - Apr 2021</p>
+            <ExLink href='http://www.makefurther.com/'>makefurther.com</ExLink>
           </div>
           <div className='details'>
             <h4>前端开发和数字交互设计</h4>
             <ul>
               <li>
-                开发工作：高效完成开发，熟练运用 React 和 TypeScript，配合 antd、umi 等前端库和框架
+                开发工作：高效完成开发，熟练运用 React 和 TypeScript，配合
+                antd、UmiJS 等前端库和框架
               </li>
               <li>
                 维护工作：维护现有项目，主要使用 Vue 和 TypeScript，配合 antd
               </li>
               <li>
-                UI/UX设计：用户界面及优化用户体验，统一设计语言，根据产品需求进行细致调研，优化需求方案，使用 Adobe XD 绘制交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范等
+                UI/UX设计：用户界面及优化用户体验，统一设计语言，根据产品需求进行细致调研，优化需求方案，使用
+                Adobe XD
+                绘制交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范等
               </li>
               <li>
                 实施管理：带领前端团队高效实现设计还原，UI走查、测试、评审、反馈等
@@ -86,7 +91,7 @@ export default function CVZH() {
               </li>
             </ul>
             <p>
-              有幸能加入链石团队，入职之初便挑起UI/UX设计的重担，兼顾网页开发工作，大力推进UI在开发过程中的实施，与前端团队密切和细致地沟通，使之建立起对网页设计的信心，灌输新的设计理念，两个月内一个具有复杂界面的网页交易系统基本成型，成为公司自研主打产品之一
+              入职之初便参与战略性产品研发，两个月内一个以用户为中心的量化交易系统基本成型，经过一年的打磨成为公司最重要的产品之一；在职期间身兼多职：作为交互设计师，我填补了团队的短板，也在一定程度上改变了团队的开发方式，开发周期变得更短、更敏捷和高效了；作为前端开发人员，在不断学习的同时也不断输出新的概念和想法，使开发团队更有活力
             </p>
           </div>
         </div>
@@ -108,7 +113,7 @@ export default function CVZH() {
               </li>
               <li>
                 作品展示：
-                <ExLink href='https://donlee.online/portfolio'>
+                <ExLink href='https://donlee.online'>
                   donlee.online/portfolio
                 </ExLink>
               </li>

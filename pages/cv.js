@@ -23,14 +23,14 @@ export default function CV() {
             <h1>Peiwen Li</h1>
             <h2>Full-stack Software Developer</h2>
             <p>
-              Passionate in developing software that brings joy and peace to our
-              lives
+              User-centered, scrupulous; develop software that brings joy and
+              peace to the world
             </p>
           </div>
           <div className='contact-info'>
-            <ExLink href='http://donlee.online'>www.donlee.online</ExLink>
+            <ExLink href='http://donlee.online'>donlee.online</ExLink>
             <ExLink href='mailto: don_lee@me.com'>don_lee@me.com</ExLink>
-            <ExLink href='https://github.com/LD8'>github.com/LD8</ExLink>
+            <ExLink href='https://github.com/ld8'>github.com/ld8</ExLink>
           </div>
         </div>
       </section>
@@ -44,7 +44,9 @@ export default function CV() {
           <div className='details'>
             <ul>
               <li>
-                Front-end: JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS, VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS, Bootstrap, Material UI, Chakra UI, Ant Desgin
+                Front-end: JavaScript, TypeScript, ReactJS, Redux, MobX, NextJS,
+                VueJS, NuxtJS, UmiJS, Webpack, HTML5, CSS3, SASS, LESS,
+                Bootstrap, Material UI, Chakra UI, Ant Desgin
               </li>
               <li>Back-end: NodeJS, Python, Django, Flask, Postgres</li>
               <li>Data Visualisation: Python, Plotly, Matplotlib</li>
@@ -65,45 +67,47 @@ export default function CV() {
 
         <div className='sub-container'>
           <div className='aside'>
-            <p className='company-name'>Chaintor Tech</p>
-            <p className='year'>May 2020 - Now</p>
-            <ExLink href='http://www.chaintor.com/'>chaintor.com</ExLink>
+            <p className='company-name'>MakeFurther IT</p>
+            <p className='year'>May 2020 - April 2021</p>
+            <ExLink href='http://www.makefurther.com/'>makefurther.com</ExLink>
           </div>
           <div className='details'>
             <h4>UI UX Designer and Web Developer</h4>
             <ul>
               <li>
                 Web Dev: Efficiently develop web apps with React, TypeScript
-                alongside libraries and frameworks such as antd and umi etc.
+                alongside libraries and frameworks such as antd and UmiJS
               </li>
               <li>
-                Maintenance: Maintain existing projects, mainly using Vue and TypeScript with antd
+                Maintenance: Maintain existing projects, mainly using Vue and
+                TypeScript with antd
               </li>
               <li>
-                UI&UX Design: Design easy-to-use web UI, unify design language,
-                prototyping with Adobe XD, editing design documents including
-                frontend execution regulations etc.
+                UI&UX Design: Design user-centered web UI, unify visual
+                language, prototyping with Adobe XD, editing design documents
+                including frontend execution regulations etc.
               </li>
               <li>
                 Execution: Lead the frontend team to deliver the design in high
-                quality, weekly UI inspection, providing chances to revise and
-                deepen the design especially in the respect of UX
+                quality, initiate weekly UI inspection, providing chances to
+                revise the design and improve the user experience
               </li>
               <li>
-                Communication: Become the tunnels connecting project manager,
-                demand sector, frontend leader and backend leader, so projects
-                run more smoothly
+                Communication: Become the tunnels between stakeholders to ensure
+                that projects run smoothly
               </li>
             </ul>
             <p>
               Participating in high profile projects right after joining the
-              company was a challenge as well as a bless. During these projects,
-              I single-handedly transformed the way in which the team members
-              develop websites. The inception of UI/UX design process within the
-              team was the first step. An innovative B2B web based quantitative
-              trading system with relatively complicated UI had reached its
-              alpha phase after 2-month development. The product now has become
-              the main self-developed product of the company.
+              company was certainly a challenge. Many roles were laid on my
+              sholders. As a designer, I complemented the team and, in many
+              ways, positively transformed the dynamic within the team. As a
+              frontend developer, I contribute to the team with new ideas of how
+              to write efficient, yet elegant code. An innovative web based
+              quantitative trading platform with numerous user-centered features
+              had reached its alpha phase after 2-month development. After a
+              year of polishing, it now has become the leading product of the
+              company.
             </p>
           </div>
         </div>
@@ -129,7 +133,7 @@ export default function CV() {
               <li>
                 Portfolio:
                 <ExLink
-                  href='https://donlee.online/portfolio'
+                  href='https://donlee.online'
                   style={{ paddingLeft: '6px' }}
                 >
                   donlee.online/portfolio
@@ -211,8 +215,8 @@ export default function CV() {
             </ul>
             <p>
               In these two years, I participated in one large project over 2000
-              sqm, two medium projects over 1000 sqm and four smaller projects just
-              under 500 sqm, all of which were successfully delivered on
+              sqm, two medium projects over 1000 sqm and four smaller projects
+              just under 500 sqm, all of which were successfully delivered on
               schedule. During this time, I tasted the fruit of seamless team
               work, gained understanding of project management, realising that
               much knowledge to be learnt, followed by further study in the UK
@@ -504,16 +508,16 @@ export const SPaper = styled.main`
           margin-top: 10px;
           padding: 0;
           border-style: none;
-
           a {
             display: inline-block;
           }
-
-          :nth-child(2)::before,
-          :nth-child(3)::before {
-            content: '/';
-            padding: 0 5px;
-            color: grey;
+          a:nth-child(2),
+          a:nth-child(3) {
+            &::before {
+              content: '/';
+              padding: 0 5px;
+              color: grey;
+            }
           }
         }
       }
