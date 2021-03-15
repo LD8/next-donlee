@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styled from 'styled-components'
+import { useQuery } from '../../../lib/hooks'
 
 export default function Search({ resetInputRef }) {
   const router = useRouter()
-  const { page, size, tag } = router.query
+  const { page, size, tag } = useQuery()
   const [searchV, setSearchV] = useState('')
   resetInputRef.current = () => setSearchV('')
 
