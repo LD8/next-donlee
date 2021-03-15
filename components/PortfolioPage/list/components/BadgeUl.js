@@ -29,6 +29,7 @@ export default function BadgeUl({
 
 const SBadgeUl = styled.ul`
   width: 90%;
+  min-height: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

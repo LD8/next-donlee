@@ -20,8 +20,6 @@ export const renderers = {
 }
 
 export const PostDetail = ({ slug, title, tags, date, content }) => {
-  // TODO: double scroll optimization
-  // TODO: slow render optimization
   return (
     <SPostDetail id='SPostDetail'>
       <Head>
@@ -44,8 +42,6 @@ const SPostDetail = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.3rem;
-  /* background-color: rgb(60, 65, 60);
-  box-shadow: inset 0px -20px 20px rgb(170, 170, 170); */
   @media only screen and (max-width: 800px) {
     max-width: 95vw;
   }

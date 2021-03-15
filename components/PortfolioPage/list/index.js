@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import BadgeUl from './components/BadgeUl'
 import Showcase from './components/Showcase'
 
-export const ShowcaseList = ({ showcases = [], allBadges }) => {
+export const ShowcaseList = ({ showcases = [], allBadges = [] }) => {
   const {
     query: { badge = null },
   } = useRouter()
