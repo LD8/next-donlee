@@ -64,34 +64,56 @@ export default function CVZH() {
 
         <div className='sub-container'>
           <div className='aside'>
+            <p class='company-name'>光之树科技，上海</p>
+            <p class='year'>Apr 2021 - Now</p>
+            <ExLink href='http://www.makefurther.com/'>makefurther.com</ExLink>
+          </div>
+          <div className='details'>
+            <h4>前端负责人 | 交互设计</h4>
+            <ul>
+              <li>
+                网页应用开发：负责开发隐私计算平台的前端页面，一手操办从前端框架选择、页面逻辑代码撰写、落实页面
+                UI、到最终交互优化的全过程
+              </li>
+              <li>
+                界面设计：配合 UI
+                团队的小伙伴完成页面的样式设计，使界面既美观又提高了用户体验，更重要的是帮助前端小伙伴以更便捷的方式实现同样效果的设计
+              </li>
+              <li>
+                沟通协调：由于业务性质，存在一些产品需求上的不确定性，通过与项目经理沟通以及分析讨论，得出相应的前端解决方案
+              </li>
+            </ul>
+            <p>
+              更侧重于前端技术方面的研究和精进，并在短时间内帮助完成项目的梳理，从而明确需求以及优化用户体验
+            </p>
+          </div>
+        </div>
+
+        <div className='sub-container'>
+          <div className='aside'>
             <p className='company-name'>筹远科技，上海</p>
             <p className='year'>May 2020 - Apr 2021</p>
             <ExLink href='http://www.makefurther.com/'>makefurther.com</ExLink>
           </div>
           <div className='details'>
-            <h4>前端开发和数字交互设计</h4>
+            <h4>前端开发 | 交互设计</h4>
             <ul>
               <li>
-                开发工作：高效完成开发，熟练运用 React 和 TypeScript，配合
-                antd、UmiJS 等前端库和框架
+                网页开发：高效完成开发，熟练运用React和TypeScript，配合antd、umi等前端库和框架
               </li>
               <li>
-                维护工作：维护现有项目，主要使用 Vue 和 TypeScript，配合 antd
+                UI和UX设计：用户界面及优化用户体验，统一设计语言，经过细致地调研后，使用Adobe
+                XD绘制别致的交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范、添加代码备注等
               </li>
               <li>
-                UI/UX设计：用户界面及优化用户体验，统一设计语言，根据产品需求进行细致调研，优化需求方案，使用
-                Adobe XD
-                绘制交互原型图，撰写设计说明，编辑设计文档，包括制定UI执行规范等
+                融合实施：带领前端团队高效地实现设计，每周细致地UI走查、测试、评审、反馈等，对细节要求非常严格
               </li>
               <li>
-                实施管理：带领前端团队高效实现设计还原，UI走查、测试、评审、反馈等
-              </li>
-              <li>
-                沟通工作：成为产品经理、前端和后端团队间沟通的桥梁，从而使产品更有活力
+                沟通工作：成为需求、产品经理、前端领导和后端领导间沟通的桥梁，从而使产品更有活力
               </li>
             </ul>
             <p>
-              入职之初便参与战略性产品研发，两个月内一个以用户为中心的量化交易系统基本成型，经过一年的打磨成为公司最重要的产品之一；在职期间身兼多职：作为交互设计师，我填补了团队的短板，也在一定程度上改变了团队的开发方式，开发周期变得更短、更敏捷和高效了；作为前端开发人员，在不断学习的同时也不断输出新的概念和想法，使开发团队更有活力
+              入职之初便挑起UI和UX设计的重担，同时兼顾网页开发工作，大力推进UI在开发过程中的实施，与前端团队密切和细致地沟通，使之建立起对网页设计的信心，灌输新的设计理念，两个月内一个具有复杂界面的网页交易系统基本成型，成为公司自研主打产品之一
             </p>
           </div>
         </div>
@@ -103,7 +125,7 @@ export default function CVZH() {
             <ExLink href='http://www.donlee.online'>donlee.online</ExLink>
           </div>
           <div className='details'>
-            <h4>用户体验和全栈编程</h4>
+            <h4>用户体验全栈编程</h4>
             <ul>
               <li>
                 根据客户的商业模式和规模设计网站交互界面，搭建后端API和数据库，独立编写代码
@@ -164,7 +186,7 @@ export default function CVZH() {
             <ExLink href='https://www.mmoser.com'>mmoser.com</ExLink>
           </div>
           <div className='details'>
-            <h4>室内设计师，项目管理和协调</h4>
+            <h4>室内设计师 | 项目管理和协调</h4>
             <p>从项目协调员成长为设计师，职责也在不断变化，包括</p>
             <ul>
               <li>绘制项目草图和施工图</li>
