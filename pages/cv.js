@@ -65,6 +65,31 @@ export default function CV() {
           <h3>Experience</h3>
         </div>
 
+        <div class='sub-container'>
+          <div class='aside'>
+            <p class='company-name'>Points</p>
+            <p class='year'>Apr 2021 - Now</p>
+            <ExLink href='https://points.org/'>points.org</ExLink>
+          </div>
+          <div className='details'>
+            <h4>Web Developer | UX Designer</h4>
+            <ul>
+              <li>
+                Web Dev: Responsible for the front-end development of the company's feature product (a privacy computing platform)
+              </li>
+              <li>
+                User experience optimisation: Collaborating with UI team to optimise the overall user experience of the web app, whilst maintaining the original interface design language but realised in a more efficient manner
+              </li>
+              <li>
+                Communication: Consolidating the product requirements by analysing the needs of the end-user with the product team, then offer the front-end solutions to meet the requirement
+              </li>
+            </ul>
+            <p>
+              This role emphasises the technical craftsmanship of the front-end development, offering the chance to work with different teams to finalise the requirements of the product for user experience optimisation purposes
+            </p>
+          </div>
+        </div>
+
         <div className='sub-container'>
           <div className='aside'>
             <p className='company-name'>MakeFurther IT</p>
@@ -72,42 +97,34 @@ export default function CV() {
             <ExLink href='http://www.makefurther.com/'>makefurther.com</ExLink>
           </div>
           <div className='details'>
-            <h4>UI UX Designer and Web Developer</h4>
+            <h4>Web Developer | UI&UX Designer</h4>
             <ul>
               <li>
                 Web Dev: Efficiently develop web apps with React, TypeScript
-                alongside libraries and frameworks such as antd and UmiJS
+                alongside libraries and frameworks such as antd and umi etc.
               </li>
               <li>
-                Maintenance: Maintain existing projects, mainly using Vue and
-                TypeScript with antd
-              </li>
-              <li>
-                UI&UX Design: Design user-centered web UI, unify visual
-                language, prototyping with Adobe XD, editing design documents
-                including frontend execution regulations etc.
+                UI&UX Design: Design easy-to-use web UI, unify design language,
+                prototyping with Adobe XD, editing design documents including
+                frontend execution regulations etc.
               </li>
               <li>
                 Execution: Lead the frontend team to deliver the design in high
-                quality, initiate weekly UI inspection, providing chances to
-                revise the design and improve the user experience
+                quality, weekly UI inspection, providing chances to revise and
+                deepen the design especially in the respect of UX
               </li>
               <li>
-                Communication: Become the tunnels between stakeholders to ensure
-                that projects run smoothly
+                Communication: Become the tunnels connecting project manager,
+                demand sector, frontend leader and backend leader, so projects
+                run more smoothly
               </li>
             </ul>
             <p>
               Participating in high profile projects right after joining the
-              company was certainly a challenge. Many roles were laid on my
-              sholders. As a designer, I complemented the team and, in many
-              ways, positively transformed the dynamic within the team. As a
-              frontend developer, I contribute to the team with new ideas of how
-              to write efficient, yet elegant code. An innovative web based
-              quantitative trading platform with numerous user-centered features
-              had reached its alpha phase after 2-month development. After a
-              year of polishing, it now has become the leading product of the
-              company.
+              company was a challenge as well as a bless. An innovative B2B web
+              based quantitative trading system with relatively complicated UI
+              had reached its alpha phase after two months of development. It
+              has now become one of the feature products of the company.
             </p>
           </div>
         </div>
@@ -116,10 +133,10 @@ export default function CV() {
           <div className='aside'>
             <p className='company-name'>Freelance</p>
             <p className='year'>June 2019 - May 2020</p>
-            <ExLink href='http://www.donlee.online'>donlee.online</ExLink>
+            <ExLink href='http://donlee.online'>donlee.online</ExLink>
           </div>
           <div className='details'>
-            <h4>User Experience and Web app Designer</h4>
+            <h4>Web Developer | UI&UX Designer</h4>
             <ul>
               <li>
                 Build interactive web apps for clients - Design the
